@@ -1,0 +1,630 @@
+{
+  "url": "https://www.ubs.com/global/en/investment-bank/conferences/global.html",
+  "sanitizedPath": "/global/en/investment-bank/conferences/global",
+  "autoDetect": false,
+  "mapping": [
+    {
+      "id": "1",
+      "path": "/nav",
+      "sections": [
+        {
+          "id": "1-1",
+          "blocks": [
+            {
+              "id": "box-id-1831135597",
+              "x": 0,
+              "y": 0,
+              "width": 2884,
+              "height": 106,
+              "xpath": "/html[1]/body[1]/div[1]/header[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgb(148, 0, 211)",
+              "mapping": "header",
+              "customBlockName": "header"
+            },
+            {
+              "id": "box-id-926208082",
+              "x": 0,
+              "y": 106,
+              "width": 2884,
+              "height": 53,
+              "xpath": "/html[1]/body[1]/div[1]/header[1]/div[3]/section[3]/nav[1]/ul[1]/li[4]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgb(75, 0, 130)",
+              "mapping": "defaultContent",
+              "customBlockName": "header-global-sec"
+            }
+          ],
+          "settings": {}
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "path": "/global/en/investment-bank/conferences/global",
+      "sections": [
+        {
+          "id": "2-1",
+          "blocks": [
+            {
+              "id": "box-id-1420798447",
+              "x": 0,
+              "y": 158,
+              "width": 2884,
+              "height": 500,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/header[1]",
+              "layout": {
+                "numCols": 1,
+                "numRows": 2
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/header[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"pagehead-id\")/div[@class=\"pageheadline__messageTeaser\"]/div[@class=\"pageheadline__flexwrapstageinner\"]/div[@class=\"grid-container\"]/div[@class=\"pageheadline__flexwrapstagecontent\"]/div[@class=\"pageheadline__messageContent pageheadline__messageContent--top pageheadline__messageContent--medium pageheadline__messageContent--white\"]/div[@class=\"pageheadline__messageContentWrapper\"]/div[@class=\"pageheadline__wrapper\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/header[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"pagehead-id\")/div[@class=\"pageheadline__messageTeaser\"]/div[@class=\"pageheadline__flexwrapstageinner\"]/div[@class=\"grid-container\"]/div[@class=\"pageheadline__flexwrapstagecontent\"]/div[@class=\"pageheadline__messageContent pageheadline__messageContent--top pageheadline__messageContent--medium pageheadline__messageContent--white\"]/div[@class=\"pageheadline__messageContentWrapper\"]/div[@class=\"actionbtn__wrapper actionbtn__wrapper--left\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.4)",
+              "mapping": "hero",
+              "customBlockName": "pageheadline"
+            },
+            {
+              "id": "box-id-1358126704",
+              "x": 804,
+              "y": 698,
+              "width": 1275,
+              "height": 256,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/header[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.2)",
+              "mapping": "defaultContent",
+              "customBlockName": "sectionheader"
+            },
+            {
+              "id": "box-id--1235119808",
+              "x": 784,
+              "y": 954,
+              "width": 1315,
+              "height": 446,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]",
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l14\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l14\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.2)",
+              "mapping": "columns",
+              "customBlockName": "grid-01"
+            },
+            {
+              "id": "box-id-1420166318",
+              "x": 804,
+              "y": 1440,
+              "width": 1275,
+              "height": 128,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/header[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.2)",
+              "mapping": "defaultContent",
+              "customBlockName": "sectionheader"
+            },
+            {
+              "id": "box-id-676869409",
+              "x": 804,
+              "y": 1590,
+              "width": 1275,
+              "height": 51,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1447124229",
+              "x": 784,
+              "y": 1659,
+              "width": 1315,
+              "height": 188,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]",
+              "layout": {
+                "numCols": 1,
+                "numRows": 2
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"Greater-China-Conference-940548418\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"Greater-China-Conference-940548418\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base linklistnewlook linklistnewlook__base\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1447124260",
+              "x": 784,
+              "y": 1878,
+              "width": 1315,
+              "height": 969,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]",
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"Greater-China-Conference-940548418\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--left\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"Greater-China-Conference-940548418\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--right\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "columns",
+              "customBlockName": "grid-01"
+            },
+            {
+              "id": "box-id--1130585054",
+              "x": 804,
+              "y": 2886,
+              "width": 1275,
+              "height": 51,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1458440356",
+              "x": 784,
+              "y": 2955,
+              "width": 1315,
+              "height": 188,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]",
+              "layout": {
+                "numCols": 1,
+                "numRows": 2
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"Asian-Investment-Conference-739027954\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"Asian-Investment-Conference-739027954\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base linklistnewlook linklistnewlook__base\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1458440387",
+              "x": 784,
+              "y": 3174,
+              "width": 1315,
+              "height": 969,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]",
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"Asian-Investment-Conference-739027954\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--left\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"Asian-Investment-Conference-739027954\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--right\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "columns",
+              "customBlockName": "grid-01"
+            },
+            {
+              "id": "box-id-1356927779",
+              "x": 804,
+              "y": 4182,
+              "width": 1275,
+              "height": 51,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1469756483",
+              "x": 784,
+              "y": 4251,
+              "width": 1315,
+              "height": 119,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1469756514",
+              "x": 784,
+              "y": 4401,
+              "width": 1315,
+              "height": 975,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[2]",
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"Financial-Services-Conference-1863925895\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--60 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--left\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"Financial-Services-Conference-1863925895\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--60 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--right\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "columns",
+              "customBlockName": "grid-01"
+            },
+            {
+              "id": "box-id--450526684",
+              "x": 141,
+              "y": 5415,
+              "width": 1275,
+              "height": 51,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1481072610",
+              "x": 121,
+              "y": 5484,
+              "width": 1315,
+              "height": 188,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]",
+              "layout": {
+                "numCols": 1,
+                "numRows": 2
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"Global-Technology-Conference-953919895\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"Global-Technology-Conference-953919895\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base linklistnewlook linklistnewlook__base\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1481072641",
+              "x": 121,
+              "y": 5703,
+              "width": 1315,
+              "height": 969,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/div[2]",
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"Global-Technology-Conference-953919895\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--left\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"Global-Technology-Conference-953919895\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--right\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "columns",
+              "customBlockName": "grid-01"
+            },
+            {
+              "id": "box-id-2036986149",
+              "x": 141,
+              "y": 6711,
+              "width": 1275,
+              "height": 51,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1492388737",
+              "x": 121,
+              "y": 6780,
+              "width": 1315,
+              "height": 233,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/div[1]",
+              "layout": {
+                "numCols": 1,
+                "numRows": 2
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"European-Conference-1932006124\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"European-Conference-1932006124\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnOne verticaltabteaser__column--50 grid-cell\"]/div[@class=\"basecomponent basecomponent__base linklistnewlook linklistnewlook__base\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1492388768",
+              "x": 121,
+              "y": 7043,
+              "width": 1315,
+              "height": 969,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/div[2]",
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"European-Conference-1932006124\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--left\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"European-Conference-1932006124\")/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"verticaltabteaser__columnTwo verticaltabteaser__column--50 grid-cell\"]/div[@class=\"doubleimage__base basecomponent basecomponent__base\"]/div[@class=\"doubleimage__context--narrow\"]/div[@class=\"doubleimage__container doubleimage__container--align-left\"]/div[@class=\"doubleimage__image doubleimage__image--right\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "columns",
+              "customBlockName": "grid-01"
+            },
+            {
+              "id": "box-id--103199698",
+              "x": 804,
+              "y": 8181,
+              "width": 1275,
+              "height": 220,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/header[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.2)",
+              "mapping": "defaultContent",
+              "customBlockName": "sectionheader"
+            },
+            {
+              "id": "box-id-1873722658",
+              "x": 141,
+              "y": 8401,
+              "width": 1275,
+              "height": 166,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"gridcontrol2__fullbleed--highlight highlighting__base--bg1 highlighting__base--light highlighting__base--with-sectionHeader\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l1\"]/div[@class=\"gridcontrol2__base basecomponent small\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l14 innergrid__cell\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"gridcontrol2__fullbleed--highlight highlighting__base--bg1 highlighting__base--light highlighting__base--with-sectionHeader\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l1\"]/div[@class=\"gridcontrol2__base basecomponent small\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l14 innergrid__cell\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "columns",
+              "customBlockName": "grid-01"
+            },
+            {
+              "id": "box-id-1873722689",
+              "x": 141,
+              "y": 8608,
+              "width": 1275,
+              "height": 68,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id-1873722720",
+              "x": 141,
+              "y": 8677,
+              "width": 1275,
+              "height": 110,
+              "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]",
+              "layout": {
+                "numCols": 5,
+                "numRows": 1
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"gridcontrol2__fullbleed--highlight highlighting__base--bg1 highlighting__base--light highlighting__base--with-sectionHeader\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l1\"]/div[@class=\"gridcontrol2__base basecomponent small\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container\"]/div[@class=\"grid-innerContainer--indentWrapper\"]/div[@class=\"grid-innerContainer--indentL20\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l20 innergrid__cell\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"gridcontrol2__fullbleed--highlight highlighting__base--bg1 highlighting__base--light highlighting__base--with-sectionHeader\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l1\"]/div[@class=\"gridcontrol2__base basecomponent small\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container\"]/div[@class=\"grid-innerContainer--indentWrapper\"]/div[@class=\"grid-innerContainer--indentL20\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l20 innergrid__cell\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"gridcontrol2__fullbleed--highlight highlighting__base--bg1 highlighting__base--light highlighting__base--with-sectionHeader\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l1\"]/div[@class=\"gridcontrol2__base basecomponent small\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container\"]/div[@class=\"grid-innerContainer--indentWrapper\"]/div[@class=\"grid-innerContainer--indentL20\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l20 innergrid__cell\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"gridcontrol2__fullbleed--highlight highlighting__base--bg1 highlighting__base--light highlighting__base--with-sectionHeader\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l1\"]/div[@class=\"gridcontrol2__base basecomponent small\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container\"]/div[@class=\"grid-innerContainer--indentWrapper\"]/div[@class=\"grid-innerContainer--indentL20\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l20 innergrid__cell\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]",
+                  "xpathWithDetails": "id(\"main\")/div[@class=\"responsive__base\"]/div[@class=\"gridcontrol2__base basecomponent keyline-default\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"gridcontrol2__fullbleed--highlight highlighting__base--bg1 highlighting__base--light highlighting__base--with-sectionHeader\"]/div[@class=\"grid-container gridcontrol2__gridContainer gridcontrol2__gridContainer--vertical-spacing-standard\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l1\"]/div[@class=\"gridcontrol2__base basecomponent small\"]/div[@class=\"gridcontrol2__spacing gridcontrol2__spacing--standard\"]/div[@class=\"grid-container\"]/div[@class=\"grid-innerContainer--indentWrapper\"]/div[@class=\"grid-innerContainer--indentL20\"]/div[@class=\"grid-row\"]/div[@class=\"gridcontrol2__cell grid-cell grid-cell--l20 innergrid__cell\"]"
+                }
+              ],
+              "color": "rgba(0, 0, 255, 0.1)",
+              "mapping": "columns",
+              "customBlockName": "grid-02"
+            }
+          ],
+          "settings": {}
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "path": "/footer",
+      "sections": [
+        {
+          "id": "3-1",
+          "blocks": [
+            {
+              "id": "box-id--675607002",
+              "x": 0,
+              "y": 8912,
+              "width": 2884,
+              "height": 21,
+              "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[1]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 255, 0, 0.4)",
+              "mapping": "defaultContent",
+              "customBlockName": "footer-top-bar"
+            },
+            {
+              "id": "box-id--675606971",
+              "x": 0,
+              "y": 8953,
+              "width": 2884,
+              "height": 176,
+              "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[2]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 255, 0, 0.4)",
+              "mapping": "defaultContent",
+              "customBlockName": "footer-centered-text"
+            },
+            {
+              "id": "box-id--675606940",
+              "x": 0,
+              "y": 9129,
+              "width": 2884,
+              "height": 117,
+              "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[3]",
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "color": "rgba(0, 255, 0, 0.4)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            },
+            {
+              "id": "box-id--675606909",
+              "x": 0,
+              "y": 9246,
+              "width": 2884,
+              "height": 246,
+              "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[4]",
+              "layout": {
+                "numCols": 1,
+                "numRows": 2
+              },
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[4]/div[1]/div[1]",
+                  "xpathWithDetails": "id(\"disclaimer\")/div[@class=\"grid-container\"]/div[@class=\"basecomponent footerLinks footernav__base\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[4]/div[1]/div[2]",
+                  "xpathWithDetails": "id(\"disclaimer\")/div[@class=\"grid-container\"]/div[@class=\"footer__disclaimer\"]"
+                }
+              ],
+              "color": "rgba(0, 255, 0, 0.4)",
+              "mapping": "defaultContent",
+              "customBlockName": ""
+            }
+          ],
+          "settings": {}
+        }
+      ]
+    }
+  ]
+}
