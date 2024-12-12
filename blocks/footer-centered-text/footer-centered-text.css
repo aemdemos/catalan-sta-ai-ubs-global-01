@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  background-color: #f7f7f7; /* Background color matching the image */
   padding: 20px 0; /* Add some padding to the top and bottom */
   width: 100%; /* Ensure it takes full width */
 }
