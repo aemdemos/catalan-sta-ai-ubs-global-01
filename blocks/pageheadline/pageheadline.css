@@ -1,80 +1,81 @@
 
-.pageheadline-container > .pageheadline-wrapper {
-  max-width: unset;
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Ensure children are side by side */
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pageheadline-container > .pageheadline-wrapper > .pageheadline {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-  padding: 40px 24px;
   min-height: 300px;
+  align-items: center; /* Vertically center content */
 }
 
-.pageheadline-container > .pageheadline-wrapper > .pageheadline > div:nth-child(1) {
-  flex: 1;
-  order: 2; /* Ensure image is on the right */
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child {
+  flex: 0 0 60%; /* Image container width */
   display: flex;
-  justify-content: center;
-  align-items: center; /* Center image vertically */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .pageheadline > div:nth-child(2) {
-  flex: 1;
-  order: 1; /* Ensure text is on the left */
-  background-color: white;
-  padding: 40px; /* Increased padding for better spacing */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center text vertically */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .pageheadline h1 {
-  color: black;
-  margin-bottom: 20px; /* Added margin for spacing */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .pageheadline p {
-  color: black;
-  margin-bottom: 20px; /* Added margin for spacing */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .pageheadline .button-container {
-  margin-top: 20px;
-  text-align: center; /* Center the button */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .pageheadline .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: red;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.pageheadline-container > .pageheadline-wrapper > .pageheadline picture {
-  flex: 1;
-  order: 2;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.pageheadline-container > .pageheadline-wrapper > .pageheadline img {
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child picture,
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
-@media (min-width: 900px) {
-  .pageheadline-container > .pageheadline-wrapper > .pageheadline {
-    padding: 40px 32px;
-  }
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+  flex: 0 0 40%; /* Text container width */
+  background-color: white; /* Background color of the text container */
+  padding: 40px 20px; /* Adjust padding as needed */
+  display: flex;
+  flex-direction: column; /* Ensure text elements stack vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  position: relative;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px; /* Width of the red line */
+  background-color: red;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+  font-size: 24px; /* Adjust as needed */
+  margin-bottom: 10px;
+  color: black; /* Change text color to black */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p {
+  font-size: 16px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust margin for better spacing */
+  color: black; /* Change text color to black */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  margin: 20px 0; /* Add margin to match original image spacing */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button {
+  background-color: red;
+  color: white;
+  padding: 15px 30px; /* Increase padding for prominence */
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0; /* Remove rounded design */
+  box-shadow: none; /* Ensure no shadow is applied */
+  font-size: 16px; /* Match the font size */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:hover,
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:focus {
+  background-color: darkred; /* Add a darker red on hover/focus for better effect */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:last-of-type {
+  margin-top: 10px; /* Adjust the margin for the last paragraph */
 }
