@@ -27,7 +27,7 @@
   height: auto; /* Ensure the image container stretches to fill the height */
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .grid-01-wrapper > .grid-01 > div {
     flex-direction: row;
     align-items: flex-start;

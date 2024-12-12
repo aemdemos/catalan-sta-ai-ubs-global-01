@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 0; /* Padding for vertical alignment */
+  max-width: unset;
 }
 
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div {
@@ -59,10 +60,4 @@
   border-radius: 4px;
   color: var(--background-color);
   margin-left: 20px; /* Increased margin for better spacing */
-}
-
-/* Ensure the block can span the entire width of the page if necessary */
-.footer-top-bar-container > .footer-top-bar-wrapper {
-  max-width: unset;
-  padding: 0;
 }
