@@ -1,0 +1,68 @@
+
+.footer-top-bar-container > .footer-top-bar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0; /* Padding for vertical alignment */
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p,
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Increased margin for better spacing */
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li {
+  display: inline;
+  margin: 0 10px; /* Increased margin for better spacing */
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li:not(:last-child)::after {
+  content: '>';
+  margin-left: 5px;
+  color: #505050;
+}
+
+/* Adjusted margin for better spacing */
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > .button-container {
+  display: flex;
+  align-items: center;
+  margin-left: 30px; /* Increased margin for better spacing */
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar .button {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: var(--link-color);
+  border-radius: 4px;
+  color: var(--background-color);
+  margin-left: 20px; /* Increased margin for better spacing */
+}
+
+/* Ensure the block can span the entire width of the page if necessary */
+.footer-top-bar-container > .footer-top-bar-wrapper {
+  max-width: unset;
+  padding: 0;
+}

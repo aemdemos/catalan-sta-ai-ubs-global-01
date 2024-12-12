@@ -1,0 +1,36 @@
+
+.footer-centered-text-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #f7f7f7; /* Background color matching the image */
+  padding: 20px 0; /* Add some padding to the top and bottom */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.footer-centered-text {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content within this container */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.footer-centered-text > div {
+  display: flex;
+  flex-direction: row; /* Ensure elements are side by side */
+  align-items: center;
+  justify-content: center; /* Center the text and logo side by side */
+  text-align: center; /* Center align text */
+}
+
+.footer-centered-text p {
+  margin: 0; /* Remove margin */
+  display: flex;
+  align-items: center; /* Vertically align text */
+  justify-content: center;
+}
+
+.footer-centered-text img {
+  margin-left: 20px; /* Add spacing between text and image */
+  align-self: center; /* Vertically align image */
+}

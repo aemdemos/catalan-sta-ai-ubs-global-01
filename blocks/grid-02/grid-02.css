@@ -1,0 +1,60 @@
+
+/* Ensure the container is using flexbox layout */
+.grid-02-wrapper .grid-02 {
+  display: flex;
+  justify-content: space-between; /* Space out the items evenly */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Full width of the parent */
+}
+
+/* Each top-level div within the grid */
+.grid-02-wrapper .grid-02 > div {
+  display: flex;
+  flex-direction: row; /* Align children horizontally */
+  justify-content: space-between; /* Space out the items evenly */
+  width: 100%; /* Full width of the parent */
+}
+
+.grid-02-wrapper .grid-02 > div > div {
+  display: flex;
+  flex-direction: row; /* Align children horizontally */
+  align-items: center; /* Center-align the text and arrow */
+  text-align: center; /* Center-align the text */
+  padding: 0 10px; /* Optional: add some padding for spacing */
+}
+
+/* Links within each list item */
+.grid-02-wrapper .grid-02 ul li {
+  list-style-type: none; /* Remove the list markers (dots) */
+  display: flex; /* Ensure the list items are flex containers */
+  flex-direction: column; /* Align children vertically within the list item */
+  align-items: center; /* Center-align the children */
+}
+
+/* Text and arrow within each link */
+.grid-02-wrapper .grid-02 ul li a {
+  display: inline-flex;
+  align-items: center; /* Vertically center the text and arrow */
+  font-weight: bold; /* Make the text bold */
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Set text color */
+}
+
+/* Arrow icon (assuming it is part of the pseudo-element) */
+.grid-02-wrapper .grid-02 ul li a::after {
+  content: '>'; /* Arrow character */
+  margin-left: 2px; /* Reduced space between text and arrow */
+  color: red; /* Set arrow color */
+  font-size: 0.6em; /* Further reduce the size of the arrow */
+  vertical-align: middle; /* Center-align the arrow vertically */
+}
+
+/* Horizontal line beneath each link */
+.grid-02-wrapper .grid-02 ul li::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px; /* Thinner line */
+  background-color: black; /* Set line color */
+  margin-top: 2px; /* Adjusted space between text and line */
+}
