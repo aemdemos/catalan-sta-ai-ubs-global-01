@@ -19,8 +19,7 @@
 
 header nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
   max-width: 1264px;
   margin: auto;
@@ -31,9 +30,15 @@ header nav .nav-hamburger {
   visibility: hidden;
 }
 
+header nav .nav-brand-tools-wrapper {
+    display: flex;
+    justify-content: space-between; /* Ensure space between nav-brand and nav-tools */
+    width: 100%;
+    align-items: center;
+}
+
 header nav .nav-brand {
   display: flex;
-  align-items: center;
   gap: 5px; /* Reduced gap */
   order: 1;
 }
@@ -41,21 +46,27 @@ header nav .nav-brand {
 header nav .nav-brand .default-content-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 5px; /* Reduced gap */
+  gap: 20px; /* Reduced gap */
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 83px;
   height: auto;
   object-fit: contain;
 }
 
+header nav .nav-brand a {
+    align-items: center;
+    color: #5a5d5c;
+    cursor: pointer;
+    font: 300 0.8125rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+}
+
 header nav .nav-sections {
   display: flex;
-  justify-content: center;
   align-items: center;
-  order: 2;
+  order: 3;
+  width: 100%;
   flex: 1;
 }
 
@@ -118,11 +129,11 @@ header nav .nav-sections ul li:hover ul {
 
 header nav .nav-tools ul li a {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: red;
+  padding: 0.5rem 8px;
+  background-color: #e60000;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  font-size: 0.75rem;
 }
 
 header nav .nav-sections ul li ul li a {
@@ -139,7 +150,7 @@ header nav .nav-tools {
   display: flex;
   align-items: center;
   gap: 20px; /* Adjusted gap */
-  order: 3;
+  order: 2;
   margin-left: auto; /* Ensure right alignment */
 }
 
@@ -154,6 +165,8 @@ header nav .nav-tools ul li a[href*="locations"] {
   text-decoration: none;
   display: inline-block;
   margin-right: 0; /* Reduce margin */
+    font: 0.8125rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+
 }
 
 @media (width <= 768px) {

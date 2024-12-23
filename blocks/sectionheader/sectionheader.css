@@ -9,7 +9,7 @@
 .sectionheader.block {
     display: flex;
     flex-direction: column;
-    padding: 20px; /* Adjust padding as needed */
+    padding-top: 50px; /* Adjust padding as needed */
 }
 
 .sectionheader.block > div {
@@ -20,29 +20,32 @@
 }
 
 .sectionheader.block h2 {
-    font-size: 24px; /* Adjust as needed */
-    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color:#1c1c1c;
+    font-family: Frutiger, Arial, Helvetica, sans-serif;
+    display: block;
     margin: 0; /* Remove margins to ensure proper spacing */
     position: relative;
-    padding-bottom: 5px; /* Space for the underline */
+    padding-bottom: 20px; /* Space for the underline */
 }
 
 .sectionheader.block h2::after {
     content: '';
     display: block;
-    width: 50px; /* Adjust width as needed */
-    height: 2px;
-    background-color: red;
+    width: 80px; /* Adjust width as needed */
+    height: 4px;
+    background-color: #e60000;
     position: absolute;
     bottom: 0; /* Position underline directly under the header */
     left: 0;
 }
 
 .sectionheader.block p {
-    font-size: 16px; /* Adjust as needed */
-    line-height: 1.5;
-    margin-top: 15px; /* Space between the paragraph and the header */
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-top: 2.5rem; /* Space between the paragraph and the header */
     text-align: left; /* Ensure text starts from the left */
-    width: 100%; /* Ensure paragraph spans the full width of the container */
+    width: 75%; /* Ensure paragraph spans the full width of the container */
     margin-left: 0; /* Ensure the paragraph starts directly under the title */
 }
