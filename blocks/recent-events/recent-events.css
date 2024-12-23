@@ -1,0 +1,130 @@
+.event details {
+    border: 1px solid #dadada;
+}
+
+.event .event-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-item-label {
+    order: 1;
+}
+
+.event-item-body {
+    order: 2;
+}
+
+.event-item-img picture {
+    flex: 1;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.event details + details {
+    margin-top: 24px;
+}
+
+.event details p {
+    margin-bottom: 0.8em;
+}
+
+.event details summary {
+    position: relative;
+    padding: 0 16px;
+    padding-right: 46px;
+    cursor: pointer;
+    list-style: none;
+    overflow: auto;
+    transition: background-color 0.2s;
+}
+
+.event details[open] summary {
+    background-color: var(--light-color);
+}
+
+.event details summary:focus,
+.event details summary:hover {
+    background-color: var(--light-color);
+}
+
+.event details summary::-webkit-details-marker {
+    display: none;
+}
+
+.event details summary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-width: 2px 2px 0 0;
+    transition: transform 0.2s;
+}
+
+.event details[open] summary::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.event details .event-item-body {
+    padding: 0 16px;
+}
+
+.event details[open] .event-item-body {
+    border-top: 1px solid #dadada;
+    background-color: var(--background-color);
+}
+
+
+.event-item-picture {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.event-item-picture > p > picture {
+    width: 100%;
+    height: auto; /* Ensure the image maintains its aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.event-item-picture > p {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.event-item-picture > p > picture {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: auto; /* Ensure the image container stretches to fill the height */
+}
+
+@media (width >= 900px) {
+    .event-item-picture > p {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px; /* Ensure spacing is appropriate */
+    }
+
+    .event-item-picture > p > picture {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .event-item-picture > p > picture {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end; /* Ensure image is aligned to the right */
+        align-items: flex-start; /* Align image to the start */
+        height: auto; /* Ensure the image container stretches to fill the height */
+    }
+}

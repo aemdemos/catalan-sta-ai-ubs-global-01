@@ -1,0 +1,51 @@
+
+.grid-01-wrapper > .grid-01 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.grid-01-wrapper > .grid-01 img {
+  width: 100%;
+  height: auto; /* Ensure the image maintains its aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.grid-01-wrapper > .grid-01 > div > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.grid-01-wrapper > .grid-01 > div > .grid-01-img-col {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: auto; /* Ensure the image container stretches to fill the height */
+}
+
+@media (width >= 900px) {
+  .grid-01-wrapper > .grid-01 > div {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px; /* Ensure spacing is appropriate */
+  }
+
+  .grid-01-wrapper > .grid-01 > div > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .grid-01-wrapper > .grid-01 > div > .grid-01-img-col {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Ensure image is aligned to the right */
+    align-items: flex-start; /* Align image to the start */
+    height: auto; /* Ensure the image container stretches to fill the height */
+  }
+}

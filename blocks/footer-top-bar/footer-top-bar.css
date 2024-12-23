@@ -1,0 +1,51 @@
+.footer-top-bar-container > .footer-top-bar-wrapper {
+  padding: 10px 0; /* Padding for vertical alignment */
+    background-color:white;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div {
+  display: flex;
+  align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: flex-start;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p {
+    color: #5a5d5c;
+    font: 700 0.875rem / 1.25rem Frutiger, Arial, Helvetica, sans-serif;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p:first-of-type,
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li {
+  display: inline;
+  margin: 0 4px; /* Increased margin for better spacing */
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li:not(:last-child)::after {
+  content: '>';
+  margin-left: 8px;
+  color: #505050;
+}
+
+.footer-top-bar-container .button-container {
+    margin-left: auto;
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar .button {
+    padding-bottom: 2px;
+    text-decoration: none;
+    transition: background-size 0.2s cubic-bezier(1, 0, 0.3, 1);
+}
+
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar .button::after {
+    content: '^';
+    margin-left: 8px;
+    color: #505050;
+}

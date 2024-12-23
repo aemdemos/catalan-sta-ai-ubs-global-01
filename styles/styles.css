@@ -12,11 +12,11 @@
  */
 :root {
   --background-color: white;
-  --light-color: #f8f8f8;
+  --light-color: #f4f3ee;
   --dark-color: #505050;
   --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-color: #131313;
+  --link-hover-color: #131313;
   --body-font-family: "Frutiger", "Frutiger Fallback", "Arial", "Helvetica", "sans-serif";
   --heading-font-family: "Frutiger", "Frutiger Fallback", "Arial", "Helvetica", "sans-serif";
   --body-font-size-m: 22px;
@@ -28,7 +28,7 @@
   --heading-font-size-m: 27px;
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
-  --nav-height: 64px;
+  --nav-height: 106px;
 }
 
 /* fallback fonts */
@@ -88,6 +88,7 @@
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
   }
+    --grid-absolute-gutter: 40px;
 }
 
 body {
@@ -98,6 +99,7 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  --grid-absolute-gutter: 40px;
 }
 
 body.appear {
@@ -201,8 +203,8 @@ a.button:any-link, button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--link-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -210,7 +212,8 @@ a.button:any-link, button {
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--link-color);
+  color: var(--background-color);
   cursor: pointer;
 }
 
