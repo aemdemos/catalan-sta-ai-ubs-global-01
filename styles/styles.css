@@ -88,6 +88,7 @@
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
   }
+    --grid-absolute-gutter: 40px;
 }
 
 body {
@@ -98,6 +99,7 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  --grid-absolute-gutter: 40px;
 }
 
 body.appear {

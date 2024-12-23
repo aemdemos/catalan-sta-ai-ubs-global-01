@@ -16,7 +16,7 @@
 
 .footer-centered-text > div {
   display: flex;
-  flex-direction: row; /* Ensure elements are side by side */
+  flex-direction: column; /* Ensure elements are side by side */
   align-items: center;
   justify-content: center; /* Center the text and logo side by side */
   text-align: center; /* Center align text */
