@@ -38,6 +38,20 @@
     transition: background-color 0.2s;
 }
 
+.event-item-label h3 {
+    color: var(--color-text-inverted, #1c1c1c);
+    font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.event-item-body p {
+    font: 1rem / 1.625rem 'Frutiger', Arial, Helvetica, sans-serif;
+    color: #1c1c1c;
+    padding-top: 0.0225em;
+    padding-bottom: 0;
+    margin-bottom: -0.01em;
+}
+
 .event details[open] summary {
     background-color: var(--light-color);
 }
@@ -51,21 +65,17 @@
     display: none;
 }
 
-.event details summary::after {
-    content: '';
+.event-item-label summary::after {
+    content: '>';
     position: absolute;
     top: 50%;
     right: 18px;
-    transform: translateY(-50%) rotate(135deg);
-    width: 6px;
-    height: 6px;
-    border: 2px solid;
-    border-width: 2px 2px 0 0;
+    transform: translateY(-50%) rotate(90deg);
     transition: transform 0.2s;
 }
 
-.event details[open] summary::after {
-    transform: translateY(-50%) rotate(-45deg);
+.event-item details[open] summary::after {
+    transform: translateY(-50%) rotate(-90deg);
 }
 
 .event details .event-item-body {
@@ -77,54 +87,22 @@
     background-color: var(--background-color);
 }
 
-
-.event-item-picture {
+.event-item-img {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px; /* Adjust the gap as needed */
+    justify-content: space-between; /* Adjusts spacing between images */
 }
 
-.event-item-picture > p > picture {
-    width: 100%;
-    height: auto; /* Ensure the image maintains its aspect ratio */
-    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+.picture-wrapper {
+    flex: 1; /* Ensures both images take up equal space */
+    margin: 0 10px; /* Adds some space between the images */
 }
 
-.event-item-picture > p {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.picture-wrapper img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto;
 }
 
-.event-item-picture > p > picture {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    height: auto; /* Ensure the image container stretches to fill the height */
+.event-item-img .right-picture-wrapper {
+    padding-top: 3.75em;
 }
 
-@media (width >= 900px) {
-    .event-item-picture > p {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 24px; /* Ensure spacing is appropriate */
-    }
-
-    .event-item-picture > p > picture {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .event-item-picture > p > picture {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end; /* Ensure image is aligned to the right */
-        align-items: flex-start; /* Align image to the start */
-        height: auto; /* Ensure the image container stretches to fill the height */
-    }
-}

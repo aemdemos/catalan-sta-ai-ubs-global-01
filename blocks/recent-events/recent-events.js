@@ -13,10 +13,24 @@ export default function decorate(block) {
 
     const pictures = images.querySelectorAll('picture');
 
-    if (pictures.length >= 2) {
-      pictures[0].classList.add('image-left');
-      pictures[1].classList.add('image-right');
-    }
+// Create new div wrappers for each picture and add the appropriate classes
+    pictures.forEach((picture, index) => {
+      const divWrapper = document.createElement('div');
+      divWrapper.classList.add('picture-wrapper');
+      if (index === 0) {
+        picture.classList.add('image-left');
+        divWrapper.classList.add('left-picture-wrapper');
+      } else if (index === 1) {
+        picture.classList.add('image-right');
+        divWrapper.classList.add('right-picture-wrapper');
+      }
+      divWrapper.appendChild(picture);
+      images.appendChild(divWrapper);
+    });
+
+// Remove the original <p> wrapper
+    const wrapper = images.querySelector('p');
+    wrapper.remove();
 
     // decorate event item
     const details = document.createElement('details');
