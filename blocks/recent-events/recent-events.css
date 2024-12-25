@@ -1,37 +1,17 @@
-.event details {
-    border: 1px solid #dadada;
-}
-
-.event .event-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.event-item-label {
-    order: 1;
-}
-
-.event-item-body {
-    order: 2;
-}
-
-.event-item-img picture {
-    flex: 1;
+.recent-events .event-item {
+    border-bottom: 1px solid #f4f3ee;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.event details + details {
-    margin-top: 24px;
+.recent-events details + details {
 }
 
-.event details p {
+.recent-events details p {
     margin-bottom: 0.8em;
 }
 
-.event details summary {
+.recent-events details summary {
     position: relative;
-    padding: 0 16px;
-    padding-right: 46px;
     cursor: pointer;
     list-style: none;
     overflow: auto;
@@ -40,8 +20,9 @@
 
 .event-item-label h3 {
     color: var(--color-text-inverted, #1c1c1c);
-    font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+    font: 1.2rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
     text-align: left;
+    margin-bottom: 0.8em;
 }
 
 .event-item-body p {
@@ -52,44 +33,54 @@
     margin-bottom: -0.01em;
 }
 
-.event details[open] summary {
-    background-color: var(--light-color);
+.event-item-body .button-container a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 550;
+    padding-left: 0;
 }
 
-.event details summary:focus,
-.event details summary:hover {
-    background-color: var(--light-color);
+.event-item-body .button-container a::after {
+    content: '';
+    display: inline-block;
+    width: 1rem; /* Set the desired width */
+    height: 1rem; /* Set the desired height */
+    background: url('../../icons/arrow.svg') no-repeat center center;
+    background-size: contain;
+    margin-left: 1rem; /* Adjust the spacing between the text and the icon */
+    transform: translateY(15%) rotate(-90deg);
 }
 
-.event details summary::-webkit-details-marker {
+.event-item-body .button-container a.button:hover, a.button:focus, button:hover, button:focus {
+    background-color: var(--background-color);
+    color: #1c1c1c;
+    cursor: pointer;
+}
+
+.recent-events details summary::-webkit-details-marker {
     display: none;
 }
 
-.event-item-label summary::after {
-    content: '>';
+.recent-events details summary::after {
+    content: '';
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 18px;
-    transform: translateY(-50%) rotate(90deg);
+    width: 16px; /* Set the desired width */
+    height: 16px; /* Set the desired height */
+    background: url('../../icons/arrow.svg') no-repeat center center;
+    background-size: contain;
     transition: transform 0.2s;
 }
 
-.event-item details[open] summary::after {
-    transform: translateY(-50%) rotate(-90deg);
-}
-
-.event details .event-item-body {
-    padding: 0 16px;
-}
-
-.event details[open] .event-item-body {
-    border-top: 1px solid #dadada;
-    background-color: var(--background-color);
+.recent-events details[open] summary::after {
+    transform: translateY(-50%) rotate(-180deg);
 }
 
 .event-item-img {
     display: flex;
     justify-content: space-between; /* Adjusts spacing between images */
+    padding-bottom: 1rem;
 }
 
 .picture-wrapper {
@@ -106,3 +97,27 @@
     padding-top: 3.75em;
 }
 
+@media (width >= 750px) {
+    .event-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-item-label {
+        order: -1;
+    }
+
+    .event-item-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .event-item-body {
+        flex: 1;
+        margin: 1em 5% 1em 0;
+    }
+
+    .event-item-img {
+        flex: 1;
+    }
+}

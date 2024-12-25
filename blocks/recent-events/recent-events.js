@@ -32,10 +32,16 @@ export default function decorate(block) {
     const wrapper = images.querySelector('p');
     wrapper.remove();
 
+    const content = document.createElement('div');
+    content.className = 'event-item-content';
+
+// Append body and images to the new div
+    content.append(body, images);
+
     // decorate event item
     const details = document.createElement('details');
     details.className = 'event-item';
-    details.append(summary, body, images);
+    details.append(summary, content);
     row.replaceWith(details);
   });
 }
