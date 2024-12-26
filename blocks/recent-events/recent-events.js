@@ -3,7 +3,7 @@ export default function decorate(block) {
     // decorate event item label
     const label = row.children[0];
     const summary = document.createElement('summary');
-    summary.className = 'event-item-label';``
+    summary.className = 'event-item-label';
     summary.append(...label.childNodes);
     // decorate event item body
     const body = row.children[1];
@@ -13,7 +13,6 @@ export default function decorate(block) {
 
     const pictures = images.querySelectorAll('picture');
 
-// Create new div wrappers for each picture and add the appropriate classes
     pictures.forEach((picture, index) => {
       const divWrapper = document.createElement('div');
       divWrapper.classList.add('picture-wrapper');
@@ -28,14 +27,12 @@ export default function decorate(block) {
       images.appendChild(divWrapper);
     });
 
-// Remove the original <p> wrapper
     const wrapper = images.querySelector('p');
     wrapper.remove();
 
     const content = document.createElement('div');
     content.className = 'event-item-content';
 
-// Append body and images to the new div
     content.append(body, images);
 
     // decorate event item
@@ -43,5 +40,48 @@ export default function decorate(block) {
     details.className = 'event-item';
     details.append(summary, content);
     row.replaceWith(details);
+  });
+
+  const recentEventsContainer = document.querySelector('.recent-events');
+
+  if (recentEventsContainer) {
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.className = 'tabs-list';
+    const eventItems = recentEventsContainer.querySelectorAll('.event-item');
+    eventItems.forEach((eventItem, index) => {
+      const summary = eventItem.querySelector('.event-item-label h3');
+      if (summary) {
+        const tabId = `tab-id-${index + 1}`; // Generate unique ID
+        eventItem.id = tabId;
+        const button = document.createElement('button');
+        button.className = 'tabs-tab';
+        button.id = tabId;
+        const buttonText = document.createElement('p');
+        buttonText.textContent = summary.textContent;
+        button.appendChild(buttonText);
+        buttonsContainer.appendChild(button);
+      }
+    });
+    recentEventsContainer.insertBefore(buttonsContainer, recentEventsContainer.firstChild);
+  }
+
+  const tabs = document.querySelectorAll('.tabs-tab');
+  const details = document.querySelectorAll('.event-item');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs
+      tabs.forEach((t) => t.classList.remove('active'));
+      // Close all details
+      details.forEach((detail) => detail.removeAttribute('open'));
+      // Add active class to the clicked tab
+      tab.classList.add('active');
+      // Open the corresponding details
+      const correspondingDetail = document.querySelector(
+        `.event-item#${tab.id}`,
+      );
+      if (correspondingDetail) {
+        correspondingDetail.setAttribute('open', 'open');
+      }
+    });
   });
 }

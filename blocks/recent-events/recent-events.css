@@ -2,12 +2,20 @@
     border-bottom: 1px solid #f4f3ee;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-.recent-events details + details {
+.event-item-body p {
+    font: 1rem / 1.625rem Frutiger, Arial, Helvetica, sans-serif;
+    color: #1c1c1c;
+    padding-top: 0.0225em;
+    padding-bottom: 0;
+    margin-bottom: -0.01em;
 }
 
 .recent-events details p {
     margin-bottom: 0.8em;
+}
+
+.recent-events .tabs-list {
+    display: none;
 }
 
 .recent-events details summary {
@@ -19,18 +27,10 @@
 }
 
 .event-item-label h3 {
-    color: var(--color-text-inverted, #1c1c1c);
+    color: #1c1c1c;
     font: 1.2rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
     text-align: left;
     margin-bottom: 0.8em;
-}
-
-.event-item-body p {
-    font: 1rem / 1.625rem 'Frutiger', Arial, Helvetica, sans-serif;
-    color: #1c1c1c;
-    padding-top: 0.0225em;
-    padding-bottom: 0;
-    margin-bottom: -0.01em;
 }
 
 .event-item-body .button-container a {
@@ -51,6 +51,7 @@
     transform: translateY(15%) rotate(-90deg);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .event-item-body .button-container a.button:hover, a.button:focus, button:hover, button:focus {
     background-color: var(--background-color);
     color: #1c1c1c;
@@ -120,4 +121,78 @@
     .event-item-img {
         flex: 1;
     }
+}
+
+@media (width >= 1024px) {
+    .recent-events {
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, sans-serif;
+    }
+
+    .recent-events .tabs-list {
+        flex: 0 0 200px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .recent-events .tabs-tab {
+        padding: 0.2rem;
+        cursor: pointer;
+        text-align: left;
+        font-size: 24px;
+        font-family: Frutiger, Arial, Helvetica, sans-serif;
+        margin: 0.1rem;
+    }
+
+    .recent-events .tabs-tab.active {
+        background-color: var(--background-color);
+        color: #1c1c1c;
+        cursor: pointer;
+
+        /* TODO: Add arrow in front to Highlight the active tab */
+    }
+
+    .recent-events .event-item {
+        display: none; /* Hide all event items by default */
+        flex: 1;
+    }
+
+    .recent-events .event-item .event-item-label {
+        display: none;
+    }
+
+    .recent-events .event-item-content {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    .recent-events .event-item[open] {
+        display: block; /* Show the selected event content */
+    }
+
+    .recent-events .event-item-body {
+        flex: 1; /* Takes up available space */
+    }
+
+    /* Ensure the images and content are well-aligned */
+    .recent-events .event-item-img {
+        flex: 1; /* Takes up available space */
+        display: flex;
+    }
+
+    .recent-events .event-item-img .picture-wrapper {
+        flex: 1;
+    }
+
+    .recent-events .event-item-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
 }
