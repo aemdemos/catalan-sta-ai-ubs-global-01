@@ -39,7 +39,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (width >= 1280px) {
     .pageheadline {
         height: 31.25rem;
     }
@@ -67,6 +67,12 @@
     background-color: red;
 }
 
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p {
+    margin-top: 0.75rem;
+    color: #1c1c1c;
+    font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+}
+
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1,
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
     position: relative;
@@ -75,23 +81,14 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
     margin-bottom: 0; /* Remove bottom margin to ensure continuity */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
-    margin-top: 0; /* Remove top margin to ensure continuity */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
     color:  #1c1c1c;
     font: 300 2rem / 2.5rem Frutiger, Arial, Helvetica, sans-serif;
     font-size: 3rem;
     line-height: 5rem;
 }
 
-.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p {
-    margin-top: 0.75rem;
-    color: #1c1c1c;
-    font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
+    margin-top: 0; /* Remove top margin to ensure continuity */
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {

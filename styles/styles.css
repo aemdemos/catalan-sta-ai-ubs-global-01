@@ -102,6 +102,12 @@ body {
   line-height: 1.6;
 
   --grid-absolute-gutter: 40px;
+    --root-width: 933px;
+    --grid-absolute-cols: 24;
+    --grid-container-spacing: 34px;
+    --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing)* 2);
+  --grid-absolute-col-width: calc((var(--grid-container-width) - var(--grid-absolute-gutter)*(var(--grid-absolute-cols) - 1)) / var(--grid-absolute-cols));
+
 }
 
 body.appear {
@@ -195,18 +201,13 @@ a.button:any-link, button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--background-color);
-  color: var(--link-color);
+  color: var(--body-background-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -214,8 +215,6 @@ a.button:any-link, button {
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus {
-  background-color: var(--link-color);
-  color: var(--background-color);
   cursor: pointer;
 }
 
