@@ -102,7 +102,7 @@ body {
   line-height: 1.6;
 
   --grid-absolute-gutter: 40px;
-    --root-width: 933px;
+    --root-width: 1905px;
     --grid-absolute-cols: 24;
     --grid-container-spacing: 34px;
     --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing)* 2);

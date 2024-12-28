@@ -1,11 +1,11 @@
 .footer-top-bar-container > .footer-top-bar-wrapper {
-  padding: 10px 0; /* Padding for vertical alignment */
-    background-color:white;
+    padding: 10px 0; /* Padding for vertical alignment */
+    background-color: white;
 }
 
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
     max-width: 1200px;
     margin: auto;
     justify-content: flex-start;
@@ -18,20 +18,26 @@
 
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p:first-of-type,
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
 }
 
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li {
-  display: inline;
-  margin: 0 4px; /* Increased margin for better spacing */
+    display: inline;
+    margin: 0 4px; /* Increased margin for better spacing */
 }
 
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li:not(:last-child)::after {
-  content: '>';
-  margin-left: 8px;
-  color: #505050;
+    content: '';
+    display: inline-block;
+    width: 1rem; /* Adjust width as needed */
+    height: 0.9rem; /* Adjust height as needed */
+    background: url('../../icons/arrow_white.svg') no-repeat center center;
+    background-size: contain;
+    margin-left: 8px;
+    filter: invert(1);
+    transform: translateY(2px) rotate(-90deg); /* Rotate the icon by 90 degrees */
 }
 
 .footer-top-bar-container .button-container {
@@ -45,7 +51,13 @@
 }
 
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar .button::after {
-    content: '^';
+    content: '';
     margin-left: 8px;
-    color: #505050;
+    background: url('../../icons/arrow_white.svg') no-repeat center center;
+    background-size: contain;
+    width: 0.7rem; /* Adjust width as needed */
+    height: 1rem; /* Adjust height as needed */
+    display: inline-block;
+    filter: invert(1);
+    transform: translateY(2px) rotate(180deg); /* Rotate the icon by 90 degrees */
 }

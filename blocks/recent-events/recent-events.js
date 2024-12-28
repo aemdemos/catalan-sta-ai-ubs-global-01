@@ -67,6 +67,11 @@ export default function decorate(block) {
 
   const tabs = document.querySelectorAll('.tabs-tab');
   const details = document.querySelectorAll('.event-item');
+  // Open the first tab by default
+  if (tabs.length > 0 && details.length > 0) {
+    tabs[0].classList.add('active');
+    details[0].setAttribute('open', 'open');
+  }
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       // Remove active class from all tabs

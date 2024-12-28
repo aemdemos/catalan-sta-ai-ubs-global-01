@@ -144,6 +144,8 @@
         font-size: 24px;
         font-family: Frutiger, Arial, Helvetica, sans-serif;
         margin: 0.1rem;
+        background-color: var(--background-color);
+        border-style: none;
     }
 
     .recent-events .tabs-tab.active {
