@@ -70,6 +70,11 @@ header nav .nav-sections {
   flex: 1;
 }
 
+header nav .nav-sections .search-icon {
+    position: relative; /* Change from absolute to relative */
+    margin-left: auto;  /* Push the icon to the right end */
+}
+
 header nav .nav-sections ul {
   display: flex;
   gap: 24px;

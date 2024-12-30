@@ -150,6 +150,13 @@ export default async function decorate(block) {
         }
       });
     });
+
+    // Add search icon
+    const searchIcon = document.createElement('img');
+    searchIcon.src = '../../../../icons/search.svg';
+    searchIcon.alt = 'Search Icon';
+    searchIcon.classList.add('search-icon');
+    navSections.append(searchIcon);
   }
 
   // hamburger for mobile

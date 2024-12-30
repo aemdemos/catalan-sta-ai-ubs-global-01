@@ -47,13 +47,15 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
   background-color: white; /* Background color of the text container */
-  padding: 2.5rem 40px; /* Adjust padding as needed */
+  padding: 2rem;
+  padding-right: 0;
   display: flex;
   flex-direction: column; /* Ensure text elements stack vertically */
   justify-content: space-between; /* Distribute content evenly */
   position: relative;
   width: 625px;
-    top: 3.75rem;
+  top: 3.75rem;
+  left: -2rem;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1::before,
@@ -81,6 +83,7 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
     margin-bottom: 0; /* Remove bottom margin to ensure continuity */
+    margin-top: 0;
     color:  #1c1c1c;
     font: 300 2rem / 2.5rem Frutiger, Arial, Helvetica, sans-serif;
     font-size: 3rem;
@@ -89,24 +92,39 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
     margin-top: 0; /* Remove top margin to ensure continuity */
+    padding-right: 6rem;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type strong {
+    color: #da0000;
+    font-weight: normal;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
-  display: flex;
-  margin: 20px 0; /* Add margin to match original image spacing */
+    padding-top: 2.5rem;
+    display: flex;
+    margin: 20px 0; /* Add margin to match original image spacing */
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button {
   background-color: #e60000;
   color: white;
   padding: 15px 30px; /* Increase padding for prominence */
-  text-align: center;
+  text-align: left;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
   border-radius: 0; /* Remove rounded design */
   box-shadow: none; /* Ensure no shadow is applied */
   font-size: 16px; /* Match the font size */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button {
+    font: 0.7rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong{
+    font: bold 0.9rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:hover,
