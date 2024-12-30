@@ -151,12 +151,26 @@ export default async function decorate(block) {
       });
     });
 
+    const conferencesLi = nav.querySelector('.nav-sections ul li.nav-drop ul');
+    if (conferencesLi) {
+      // Clone the nested ul
+      const clonedUl = conferencesLi.cloneNode(true);
+      // Create a new ul element
+      const newUl = document.createElement('ul');
+      newUl.classList.add('sublist-desktop');
+      // Append the cloned ul to the new ul
+      newUl.appendChild(clonedUl);
+      // Append the new ul to the nav-sections
+      navSections.appendChild(newUl);
+    }
+
     // Add search icon
+    const navSectionWrapper = nav.querySelector('.nav-sections .default-content-wrapper');
     const searchIcon = document.createElement('img');
     searchIcon.src = '../../../../icons/search.svg';
     searchIcon.alt = 'Search Icon';
     searchIcon.classList.add('search-icon');
-    navSections.append(searchIcon);
+    navSectionWrapper.append(searchIcon);
   }
 
   // hamburger for mobile
