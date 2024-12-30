@@ -131,6 +131,21 @@ export default async function decorate(block) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
   }
+
+  // Add search icon under nav-brand default-content-wrapper
+  const ubsLogo = document.createElement('img');
+  ubsLogo.src = '../../../../icons/UBS_Logo_Semibold.svg';
+  ubsLogo.alt = 'UBS Logo Semibold';
+  ubsLogo.classList.add('ubs-logo-icon');
+  const defaultContentWrapper = navBrand.querySelector('.default-content-wrapper');
+  defaultContentWrapper.prepend(ubsLogo);
+
+  const mobileSearchIcon = document.createElement('img');
+  mobileSearchIcon.src = '../../../../icons/search.svg';
+  mobileSearchIcon.alt = 'Search Icon';
+  mobileSearchIcon.classList.add('mobile-search-icon');
+  defaultContentWrapper.append(mobileSearchIcon);
+
   const navTools = nav.querySelector('.nav-tools');
   const brandToolsWrapper = document.createElement('div');
   brandToolsWrapper.classList.add('nav-brand-tools-wrapper');

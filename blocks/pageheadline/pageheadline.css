@@ -1,5 +1,5 @@
 .pageheadline-container .pageheadline-wrapper {
-    max-width: 1264px;
+  max-width: 1264px;
   padding: 0;
 }
 
@@ -47,13 +47,12 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
   background-color: white; /* Background color of the text container */
-  padding: 2rem;
-  padding-right: 0;
+  padding: 2rem 0 2rem 2rem;
   display: flex;
   flex-direction: column; /* Ensure text elements stack vertically */
   justify-content: space-between; /* Distribute content evenly */
   position: relative;
-  width: 625px;
+  max-width: 39rem;
   top: 3.75rem;
   left: -2rem;
 }
@@ -116,11 +115,7 @@
   text-decoration: none;
   border-radius: 0; /* Remove rounded design */
   box-shadow: none; /* Ensure no shadow is applied */
-  font-size: 16px; /* Match the font size */
-}
-
-.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button {
-    font: 0.7rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+  font: 0.7rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong{
@@ -134,4 +129,73 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:last-of-type {
   margin-top: 10px; /* Adjust the margin for the last paragraph */
+}
+
+@media (width < 1024px) {
+    .pageheadline-container .pageheadline-wrapper {
+        max-width: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    .pageheadline {
+        position: relative;
+        padding: 0 2rem;
+    }
+
+    .pageheadline picture {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        object-fit: cover;
+        box-sizing: border-box;
+        width: 100vw; /* Ensure it takes the full viewport width */
+        left: 50%; /* Center the picture */
+        transform: translateX(-50%); /* Center the picture */
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child {
+        position: relative;
+        width: 100%;
+        height: 14.75rem; /* Set the height */
+    }
+
+   .pageheadline h1 {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--background-color);
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+        margin-bottom: 0; /* Remove bottom margin to ensure continuity */
+        margin-top: 0;
+        color:  #1c1c1c;
+        font: 300 .2rem / .5rem Frutiger, Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+        background-color: white; /* Background color of the text container */
+        display: flex;
+        flex-direction: column; /* Ensure text elements stack vertically */
+        justify-content: space-between; /* Distribute content evenly */
+        width: 100%;
+        left: -2rem;
+        top:0;
+        padding-bottom: 0;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
+        padding-top: 2rem;
+    }
+}
+
+@media (width < 768px) {
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child {
+        position: relative;
+        width: 100%;
+        height: 10rem; /* Set the height */
+    }
 }
