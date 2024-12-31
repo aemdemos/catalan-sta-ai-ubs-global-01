@@ -57,6 +57,7 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false) {
+  // eslint-disable-next-line no-unused-expressions
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
@@ -103,6 +104,14 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function openNav(nav, mobileSections) {
+  mobileSections.classList.toggle('open');
+  const button = nav.querySelector('.nav-hamburger button');
+  const isOpen = mobileSections.classList.contains('open');
+  button.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  button.style.backgroundImage = isOpen ? "url('../../../../icons/close.svg')" : "url('../../../../icons/burgermenu.svg')";
+}
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -119,7 +128,7 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['brand', 'sections', 'tools', 'mobile-sections'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -166,6 +175,31 @@ export default async function decorate(block) {
       });
     });
 
+    const mobileSections = nav.querySelector('.nav-mobile-sections');
+    mobileSections.querySelectorAll('ul li').forEach((item) => {
+      if (item.querySelector('ul')) {
+        const expandBtn = document.createElement('button');
+        expandBtn.className = 'expand-btn';
+        expandBtn.setAttribute('aria-label', 'Expand');
+        expandBtn.innerHTML = '<span class="expand-list-icon"></span>';
+        item.insertBefore(expandBtn, item.firstChild);
+      }
+    });
+
+    mobileSections.querySelectorAll('ul li .expand-btn').forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent the click event from bubbling up to the parent li
+        const listItem = button.closest('li');
+        const siblingListItems = Array.from(listItem.parentElement.children);
+        siblingListItems.forEach((item) => {
+          if (item !== listItem) {
+            item.classList.remove('expanded');
+          }
+        });
+        listItem.classList.toggle('expanded');
+      });
+    });
+
     const conferencesLi = nav.querySelector('.nav-sections ul li.nav-drop ul');
     if (conferencesLi) {
       // Clone the nested ul
@@ -189,12 +223,14 @@ export default async function decorate(block) {
   }
 
   // hamburger for mobile
+  const mobileSections = nav.querySelector('.nav-mobile-sections');
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  //hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', () => openNav(nav, mobileSections));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
