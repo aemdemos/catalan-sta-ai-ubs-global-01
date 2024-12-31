@@ -110,6 +110,16 @@ function openNav(nav, mobileSections) {
   const isOpen = mobileSections.classList.contains('open');
   button.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
   button.style.backgroundImage = isOpen ? "url('../../../../icons/close.svg')" : "url('../../../../icons/burgermenu.svg')";
+  document.body.classList.toggle('no-scroll', isOpen);
+}
+
+function toggleNav(nav, mobileSections) {
+  mobileSections.classList.toggle('open');
+  const button = nav.querySelector('.nav-hamburger button');
+  const isOpen = mobileSections.classList.contains('open');
+  button.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  button.style.backgroundImage = isOpen ? "url('../../../../icons/close.svg')" : "url('../../../../icons/burgermenu.svg')";
+  document.body.classList.toggle('no-scroll', isOpen);
 }
 
 /**
@@ -229,8 +239,8 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  //hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
-  hamburger.addEventListener('click', () => openNav(nav, mobileSections));
+  // hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', () => toggleNav(nav, mobileSections));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
