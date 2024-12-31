@@ -204,9 +204,17 @@ export default async function decorate(block) {
         siblingListItems.forEach((item) => {
           if (item !== listItem) {
             item.classList.remove('expanded');
+            const expandListIcon = item.querySelector('.expand-list-icon');
+            if (expandListIcon) {
+              expandListIcon.classList.remove('rotate');
+            }
           }
         });
         listItem.classList.toggle('expanded');
+        const expandListIcon = button.querySelector('.expand-list-icon');
+        if (expandListIcon) {
+          expandListIcon.classList.toggle('rotate');
+        }
       });
     });
 

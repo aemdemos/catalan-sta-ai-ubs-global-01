@@ -122,6 +122,16 @@
     font: bold 0.9rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
 }
 
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong::after {
+    content: url('../../icons/arrow-line.svg');
+    display: inline-block;
+    margin-left: 8px; /* Adjust the spacing as needed */
+    width: 8px; /* Adjust the size as needed */
+    height: 1px; /* Adjust the size as needed */
+    vertical-align: -6px; /* Align the icon with the text */
+    filter: invert();
+}
+
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:hover,
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:focus {
   background-color: darkred; /* Add a darker red on hover/focus for better effect */

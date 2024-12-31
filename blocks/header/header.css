@@ -367,6 +367,11 @@ header nav .nav-tools ul li a[href*="locations"] {
         font: 400 1rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
     }
 
+    header nav .nav-mobile-sections a:hover {
+        text-decoration: underline;
+        text-decoration-color: #e60000;
+    }
+
     header nav .nav-mobile-sections strong a ,
     header nav .nav-mobile-sections strong  {
         color: #5a5d5c;
@@ -414,6 +419,11 @@ header nav .nav-tools ul li a[href*="locations"] {
         height: 0.9rem;
         display: inline-block;
         filter: invert();
+    }
+
+    header nav .nav-mobile-sections .expand-list-icon.rotate {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
     }
 
     header nav .nav-mobile-sections.open::after {
