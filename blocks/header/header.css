@@ -367,15 +367,15 @@ header nav .nav-tools ul li a[href*="locations"] {
         font: 400 1rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
     }
 
-    header nav .nav-mobile-sections a:hover {
-        text-decoration: underline;
-        text-decoration-color: #e60000;
-    }
-
     header nav .nav-mobile-sections strong a ,
     header nav .nav-mobile-sections strong  {
         color: #5a5d5c;
         font: 700 0.875rem / 1.25rem Frutiger, Arial, Helvetica, sans-serif;
+    }
+
+    header nav .nav-mobile-sections a:hover {
+        text-decoration: underline;
+        text-decoration-color: #e60000;
     }
 
     header nav .nav-mobile-sections ul li .expand-btn {

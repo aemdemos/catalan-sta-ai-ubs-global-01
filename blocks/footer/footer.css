@@ -17,8 +17,32 @@ footer .footer p {
     margin: auto;
 }
 
+.footer .disclaimer-links a {
+    color: #da0000 !important;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.125rem;
+    font-size: 12.0012px;
+}
+
+.footer .disclaimer-text a {
+    color: #da0000 !important;
+    text-decoration: underline;
+}
+
+.footer .disclaimer-text p {
+    margin-top: .9375em;
+    color: #5a5d5c;
+    font: 300 0.75rem / 1.245rem Frutiger, Arial, Helvetica, sans-serif;
+}
+
 .footer .footer-navigation .footer-domicile p {
     margin-bottom: 0.8rem; /* Adjust the margin as needed */
+}
+
+.footer .footer-navigation div a {
+    color: #5a5d5c;
 }
 
 .footer .footer-navigation .footer-domicile a {
@@ -32,10 +56,6 @@ footer .footer p {
     height: 1px; /* Adjust height as needed */
     background-color: #b0b0b0;
     margin-top: 1.5rem; /* Adjust margin as needed */
-}
-
-.footer .footer-navigation div a {
-    color: #5a5d5c;
 }
 
 .footer .footer-links ul {
@@ -66,26 +86,42 @@ footer .footer p {
     padding-bottom: 0.5rem;
 }
 
-.footer .disclaimer-links a {
-    color: #da0000 !important;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-thickness: 0.0625rem;
-    text-underline-offset: 0.125rem;
-    font-size: 12.0012px;
-}
-
 .footer .disclaimer-text {
     padding-bottom: 2rem;
 }
 
-.footer .disclaimer-text a {
-    color: #da0000 !important;
-    text-decoration: underline;
-}
+@media (width < 768px) {
+    footer {
+        background-color: var(--light-color);
+        font-size: 0.9rem;
+    }
 
-.footer .disclaimer-text p {
-    margin-top: .9375em;
-    color: #5a5d5c;
-    font: 300 0.75rem / 1.245rem Frutiger, Arial, Helvetica, sans-serif;
+    .footer .disclaimer-links p {
+        margin-left: 10px;
+    }
+
+    .footer .disclaimer-text p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .footer .footer-navigation .footer-domicile p {
+        margin-bottom: 0.7rem; /* Adjust the margin as needed */
+        margin-left: 10px;
+    }
+
+    .footer .footer-links ul {
+        list-style: none;
+        padding-top: 1rem;
+        padding-left: 0;
+        padding-bottom: 2rem;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer .footer-links ul li:first-child {
+        margin-left: 10px;
+    }
+
 }

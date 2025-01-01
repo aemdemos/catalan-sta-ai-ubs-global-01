@@ -93,21 +93,24 @@
 }
 
 body {
-  display: none;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+    display: none;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size-m);
+    line-height: 1.6;
 
-  --grid-absolute-gutter: 40px;
+    --grid-absolute-gutter: 40px;
     --root-width: 1905px;
     --grid-absolute-cols: 24;
     --grid-container-spacing: 34px;
-    --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing)* 2);
-  --grid-absolute-col-width: calc((var(--grid-container-width) - var(--grid-absolute-gutter)*(var(--grid-absolute-cols) - 1)) / var(--grid-absolute-cols));
+    --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing) * 2);
+    --grid-absolute-col-width: calc((var(--grid-container-width) - var(--grid-absolute-gutter) * (var(--grid-absolute-cols) - 1)) / var(--grid-absolute-cols));
 
+    @media (width >= 0) and (width <= 767px) {
+        --root-width: 500px;
+    }
 }
 
 body.appear {

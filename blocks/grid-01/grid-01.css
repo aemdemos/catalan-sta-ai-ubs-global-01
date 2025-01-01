@@ -19,6 +19,10 @@
   justify-content: flex-start;
 }
 
+.grid-01-wrapper .grid-01 p {
+    font-size: 1rem;
+}
+
 .grid-01-wrapper > .grid-01 > div > .grid-01-img-col {
   flex: 1;
   display: flex;

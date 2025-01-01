@@ -61,3 +61,18 @@
     filter: invert(1);
     transform: translateY(2px) rotate(180deg); /* Rotate the icon by 90 degrees */
 }
+
+@media (width < 768px) {
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p {
+        font: 600 0.875rem / 1.25rem Frutiger, Arial, Helvetica, sans-serif;
+    }
+
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p:first-of-type {
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+    }
+
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul {
+        font-size: 0.9rem;
+    }
+}

@@ -104,15 +104,6 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-function openNav(nav, mobileSections) {
-  mobileSections.classList.toggle('open');
-  const button = nav.querySelector('.nav-hamburger button');
-  const isOpen = mobileSections.classList.contains('open');
-  button.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
-  button.style.backgroundImage = isOpen ? "url('../../../../icons/close.svg')" : "url('../../../../icons/burgermenu.svg')";
-  document.body.classList.toggle('no-scroll', isOpen);
-}
-
 function toggleNav(nav, mobileSections) {
   mobileSections.classList.toggle('open');
   const button = nav.querySelector('.nav-hamburger button');

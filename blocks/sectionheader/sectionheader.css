@@ -49,3 +49,25 @@
     width: 75%; /* Ensure paragraph spans the full width of the container */
     margin-left: 0; /* Ensure the paragraph starts directly under the title */
 }
+
+
+@media (width < 768px) {
+    .sectionheader.block h2 {
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        color:#1c1c1c;
+        font-family: Frutiger, Arial, Helvetica, sans-serif;
+        display: block;
+        margin: 0; /* Remove margins to ensure proper spacing */
+        position: relative;
+    }
+
+    .sectionheader.block p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        margin-top: 1.5rem; /* Space between the paragraph and the header */
+        text-align: left; /* Ensure text starts from the left */
+        width: 100%; /* Ensure paragraph spans the full width of the container */
+        margin-left: 0; /* Ensure the paragraph starts directly under the title */
+    }
+}

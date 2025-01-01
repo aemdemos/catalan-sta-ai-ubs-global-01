@@ -33,6 +33,31 @@
     padding-bottom: 2rem;
 }
 
+.upcoming-events .region-item a {
+    text-decoration: none;
+    color: #1c1c1c;
+    font: bold 0.875rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #8e8d83;
+}
+
+.upcoming-events .region-item a::after {
+    content: '';
+    bottom: 0;
+    transform: translateY(0) rotate(-90deg); /* Remove translateY to align with text */
+    width: 1rem; /* Set the desired width */
+    height: 1rem; /* Set the desired height */
+    background: url('../../icons/arrow.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.upcoming-events .region-item a:hover {
+    text-decoration: underline;
+}
+
 .upcoming-events .conference-calendar p.button-container:first-of-type {
     background-color: #e60000;
     color: white;
@@ -136,30 +161,41 @@
 @media (width <= 768px) {
     .upcoming-events .region-item {
         flex: 1 1 calc(30% - 20px);
+        margin-bottom: calc(calc(var(--grid-absolute-col-width) * 1 + var(--grid-absolute-gutter) * 2) / 2);
+        max-width: 10rem;
     }
-}
 
-.upcoming-events .region-item a {
-    text-decoration: none;
-    color: #1c1c1c;
-    font: bold 0.875rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid #8e8d83;
-}
+    .upcoming-events .sectionheader h2 {
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        color: #1c1c1c;
+        font-family: Frutiger, Arial, Helvetica, sans-serif;
+        display: block;
+        margin: 0; /* Remove margins to ensure proper spacing */
+        position: relative;
+        padding-bottom: 18px; /* Space for the underline */
+        padding-top: 2rem; /* Space for the underline */
+    }
 
-.upcoming-events .region-item a::after {
-    content: '';
-    bottom: 0;
-    transform: translateY(0) rotate(-90deg); /* Remove translateY to align with text */
-    width: 1rem; /* Set the desired width */
-    height: 1rem; /* Set the desired height */
-    background: url('../../icons/arrow.svg') no-repeat center center;
-    background-size: contain;
-}
+    .upcoming-events .sectionheader h2::after {
+        width: 4rem; /* Adjust width as needed */
+    }
 
-.upcoming-events .region-item a:hover {
-    text-decoration: underline;
+    .upcoming-events .sectionheader p {
+        padding-top: 2px; /* Space for the underline */
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: #1c1c1c;
+        padding-bottom: 1rem;
+    }
+
+    .upcoming-events .region {
+        gap: 10px; /* Adjust spacing between items */
+        justify-content: space-between;
+        max-width: 100%; /* Adjust as per your preference */
+        margin: auto;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+    }
+
 }
