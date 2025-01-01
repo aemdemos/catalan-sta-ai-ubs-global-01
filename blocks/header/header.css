@@ -276,7 +276,13 @@ header nav .nav-tools ul li a[href*="locations"] {
 
     .nav-mobile-sections .default-content-wrapper {
         padding: 1.25rem;
-        border-bottom: 1px solid #cccabc;
+    }
+
+    .nav-mobile-sections .default-content-wrapper ul li a[title="Regulatory Directory"] {
+        display: block; /* Make the element a block-level element */
+        width: 100%; /* Ensure the element takes the full width */
+        border-bottom: 1px solid #cccabc; /* Add border after Regulatory Directory */
+        padding-bottom: 1.25rem; /* Adjust padding as needed */
     }
 
     .nav-mobile-sections .default-content-wrapper > p {
@@ -439,6 +445,24 @@ header nav .nav-tools ul li a[href*="locations"] {
 
     body.no-scroll {
         overflow: hidden;
+    }
+
+    /* Add icon before UBS Logins */
+    .nav-mobile-sections .default-content-wrapper ul li a[title="UBS Logins"] {
+        position: relative; /* Ensure the icon is positioned relative to the link */
+        padding-left: 1.5rem; /* Add padding to make space for the icon */
+    }
+
+    .nav-mobile-sections .default-content-wrapper ul li a[title="UBS Logins"]::before {
+        content: url('../../icons/login-icon.svg'); /* Add the icon */
+        position: absolute; /* Position the icon absolutely */
+        left: 0; /* Align the icon to the left */
+        top: 40%; /* Center the icon vertically */
+        transform: translateY(-50%); /* Adjust the vertical alignment */
+        width: 0.75rem; /* Adjust the width as needed */
+        height: 0.75rem; /* Adjust the height as needed */
+        display: inline-block; /* Ensure the icon is displayed inline */
+        vertical-align: middle;
     }
 }
 
