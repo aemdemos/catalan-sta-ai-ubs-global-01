@@ -55,7 +55,7 @@
 }
 
 .upcoming-events .region-item a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .upcoming-events .conference-calendar p.button-container:first-of-type {
@@ -101,11 +101,9 @@
 .upcoming-events .conference-calendar p.button-container:nth-of-type(2) a::after {
     content: '';
     position: absolute;
-    right: 1100px;
-    top: 2021px;
     transform: translateY(0) rotate(-90deg); /* Remove translateY to align with text */
-    width: 1.1rem; /* Set the desired width */
-    height: 1.5rem; /* Set the desired height */
+    width: 3rem; /* Set the desired width */
+    height: 1rem; /* Set the desired height */
     background: url('../../icons/arrow.svg') no-repeat center center;
     background-size: contain;
 }

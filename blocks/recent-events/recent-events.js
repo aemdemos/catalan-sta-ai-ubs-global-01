@@ -89,4 +89,16 @@ export default function decorate(block) {
       }
     });
   });
+
+  details.forEach((detail) => {
+    detail.addEventListener('toggle', () => {
+      if (detail.open) {
+        details.forEach((otherDetail) => {
+          if (otherDetail !== detail) {
+            otherDetail.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
 }
