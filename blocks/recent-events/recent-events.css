@@ -141,7 +141,7 @@
         padding: 0.2rem;
         cursor: pointer;
         text-align: left;
-        font-size: 24px;
+        font-size: 22px;
         font-family: Frutiger, Arial, Helvetica, sans-serif;
         margin: 0.1rem;
         background-color: var(--background-color);
@@ -152,8 +152,17 @@
         background-color: var(--background-color);
         color: #1c1c1c;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
 
-        /* TODO: Add arrow in front to Highlight the active tab */
+    .tabs-tab.active::before {
+        content: url('../../icons/right-arrow.svg'); /* Ensure the path is correct */
+        display: inline-block; /* Ensure the icon is displayed inline */
+        vertical-align: middle; /* Align the icon with the text */
+        margin-right: 0.5rem; /* Space between the icon and the text */
+        width: 1.5rem; /* Set the desired width */
+        height: 0.5rem; /* Set the desired height */
     }
 
     .recent-events .event-item {
