@@ -56,8 +56,13 @@ export default function decorate(block) {
         const button = document.createElement('button');
         button.className = 'tabs-tab';
         button.id = tabId;
+
+        const arrowSpan = document.createElement('span');
+        arrowSpan.className = 'arrow';
+
         const buttonText = document.createElement('p');
         buttonText.textContent = summary.textContent;
+        button.appendChild(arrowSpan);
         button.appendChild(buttonText);
         buttonsContainer.appendChild(button);
       }

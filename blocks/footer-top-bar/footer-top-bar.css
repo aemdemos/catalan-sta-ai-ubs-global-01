@@ -6,29 +6,29 @@
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div {
     display: flex;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1290px;
     margin: auto;
     justify-content: flex-start;
 }
 
-.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p {
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > p {
     color: #5a5d5c;
     font: 700 0.875rem / 1.25rem Frutiger, Arial, Helvetica, sans-serif;
 }
 
-.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p:first-of-type,
-.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul {
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > p:first-of-type,
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > ul {
     margin: 0;
     padding: 0;
     display: inline-block;
 }
 
-.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li {
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > ul > li {
     display: inline;
     margin: 0 4px; /* Increased margin for better spacing */
 }
 
-.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul > li:not(:last-child)::after {
+.footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > ul > li:not(:last-child)::after {
     content: '';
     display: inline-block;
     width: 1rem; /* Adjust width as needed */
@@ -62,17 +62,50 @@
     transform: translateY(2px) rotate(180deg); /* Rotate the icon by 90 degrees */
 }
 
+@media (width < 1280px) {
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar {
+        padding: 0 1rem;
+    }
+
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > ul {
+        font: 0.875rem / 1.25rem Frutiger, Arial, Helvetica, sans-serif;
+        color: #5a5d5c;
+    }
+
+    .footer-top-bar-container .button-container {
+        font: 0.875rem / 1.25rem Frutiger, Arial, Helvetica, sans-serif;
+        color: #5a5d5c;
+    }
+}
+
+
 @media (width < 768px) {
-    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p {
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div  > div > div > p {
         font: 600 0.875rem / 1.25rem Frutiger, Arial, Helvetica, sans-serif;
     }
 
-    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > p:first-of-type {
-        margin-left: 1rem;
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div  > div > div > p:first-of-type {
         margin-right: 0.5rem;
     }
 
-    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > ul {
-        font-size: 0.9rem;
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > ul {
+        font-size: 0.8rem;
     }
+
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > .button-container {
+        order: -1; /* Move the button-container to the top */
+        margin-bottom: 1rem; /* Add some space below the button */
+    }
+
+    .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div > div > ul > li:not(:last-child)::after {
+        width: 0.8rem; /* Adjust width as needed */
+        height: 0.8rem; /* Adjust height as needed */
+    }
+
 }

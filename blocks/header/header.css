@@ -19,8 +19,12 @@ header nav .nav-brand .default-content-wrapper p:last-child {
     z-index: 2;
 }
 
+.header-wrapper.hidden {
+    display: none;
+}
+
 .header-wrapper .nav-wrapper {
-    position: fixed;
+    position: absolute;
     z-index: 2;
     width: 100%;
     display: flex;

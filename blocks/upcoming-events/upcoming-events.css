@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0.6rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid #8e8d83;
 }
 
@@ -49,9 +49,18 @@
     bottom: 0;
     transform: translateY(0) rotate(-90deg); /* Remove translateY to align with text */
     width: 1rem; /* Set the desired width */
-    height: 1rem; /* Set the desired height */
+    height: 1.5rem; /* Set the desired height */
     background: url('../../icons/arrow.svg') no-repeat center center;
     background-size: contain;
+}
+
+.upcoming-events .region-item a:hover::after {
+    background: url('../../icons/right-arrow.svg') no-repeat center center;
+    transform: translateX(3px) translateY(0);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    vertical-align: middle;
 }
 
 .upcoming-events .region-item a:hover {
@@ -62,6 +71,7 @@
     background-color: #e60000;
     color: white;
     padding: 8px 40px; /* Increase padding for prominence */
+    padding-right: 30px;
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
@@ -75,7 +85,7 @@
     position: relative; /* Ensure the pseudo-element is positioned correctly */
     display: inline-block;
     width: auto; /* Ensure the width is not restricted */
-    padding-right: 20px;
+    padding-right: 30px;
     line-height: 1.5rem; /* Adjust line-height to match the icon size */
 }
 
@@ -84,11 +94,20 @@
     position: absolute;
     right: -.2rem;
     bottom: 0;
-    transform: translateY(0) rotate(-90deg); /* Remove translateY to align with text */
+    transform: translateX(-7px) translateY(0) rotate(-90deg); /* Remove translateY to align with text */
     width: 1.1rem; /* Set the desired width */
     height: 1.5rem; /* Set the desired height */
     background: url('../../icons/arrow_white.svg') no-repeat center center;
     background-size: contain;
+}
+
+.upcoming-events .conference-calendar p.button-container:first-of-type a:hover::after {
+    background: url('../../icons/right-arrow-white.svg') no-repeat center center;
+    transform: translateX(0) translateY(0);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    vertical-align: middle;
 }
 
 .upcoming-events .conference-calendar p.button-container:nth-of-type(2) a {
@@ -106,6 +125,15 @@
     height: 1rem; /* Set the desired height */
     background: url('../../icons/arrow.svg') no-repeat center center;
     background-size: contain;
+}
+
+.upcoming-events .conference-calendar p.button-container:nth-of-type(2) a:hover::after {
+    background: url('../../icons/right-arrow.svg') no-repeat center center;
+    transform: translateX(0) translateY(-5px);
+    width: 3rem;
+    height: 1.5rem;
+    background-size: contain;
+    vertical-align: middle;
 }
 
 .upcoming-events .text p {
@@ -194,6 +222,17 @@
         margin: auto;
         padding-top: 4rem;
         padding-bottom: 1rem;
+    }
+
+    .upcoming-events .conference-calendar p.button-container:nth-of-type(2) a {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: #1c1c1c;
+        font: bold 1rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+        word-wrap: break-word; /* Ensures long words break */
+        white-space: normal; /* Allows text to wrap to the next line */
+        overflow-wrap: break-word; /* Modern property for word breaking */
+        text-align: left;
     }
 
 }

@@ -1,5 +1,5 @@
 .pageheadline-container .pageheadline-wrapper {
-  max-width: 1264px;
+  max-width: 1290px;
   padding: 0;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .pageheadline h1 {
-  max-width: 1200px;
+  max-width: 1290px;
   margin-left: auto;
   margin-right: auto;
   color: var(--background-color);
