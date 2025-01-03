@@ -64,8 +64,8 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 5px;
-    background-color: red;
+    width: 4px;
+    background-color: #e60000;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p {
@@ -203,9 +203,29 @@
 }
 
 @media (width < 768px) {
+    .pageheadline {
+        position: relative;
+        padding: 0 1.7rem;
+    }
+
     .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child {
         position: relative;
         width: 100%;
         height: 10rem; /* Set the height */
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+        padding-left: 1.5rem;
+        font-size: 1.9rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+        padding: 2rem 0 0 1.5rem;
+
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
+        padding-right: 0;
+        padding-left: 1.5rem;
     }
 }
