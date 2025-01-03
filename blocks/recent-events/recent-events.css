@@ -1,3 +1,8 @@
+.recent-events {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
 .recent-events .event-item {
     border-bottom: 1px solid #f4f3ee;
 }
@@ -138,6 +143,7 @@
         flex-direction: row;
         font-family: Arial, sans-serif;
         min-height: 27rem;
+        padding:0;
     }
 
     .recent-events .tabs-list {
