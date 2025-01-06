@@ -229,6 +229,32 @@ export default async function decorate(block) {
     searchIcon.alt = 'Search Icon';
     searchIcon.classList.add('search-icon');
     navSectionWrapper.append(searchIcon);
+
+    const searchContainer = document.createElement('div');
+    searchContainer.className = 'search-container';
+    searchContainer.innerHTML = `
+    <div class="search-close-container">
+        <button class="search-close"></button>
+    </div>
+    <div class="search-input-container">
+    <input type="text" class="search-input" placeholder="Enter a question">
+        <div class="search-input-icon"></div>
+    </div>
+  `;
+    navSectionWrapper.appendChild(searchContainer);
+    const closeButton = searchContainer.querySelector('.search-close');
+    searchIcon.addEventListener('click', () => {
+      searchContainer.classList.add('active');
+    });
+    closeButton.addEventListener('click', () => {
+      searchContainer.classList.remove('active');
+    });
+    // Close search bar when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!searchContainer.contains(event.target) && !searchIcon.contains(event.target)) {
+        searchContainer.classList.remove('active');
+      }
+    });
   }
 
   // hamburger for mobile

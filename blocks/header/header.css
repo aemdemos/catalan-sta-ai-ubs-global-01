@@ -108,9 +108,83 @@ header nav .nav-sections .search-icon {
     margin-left: auto; /* Push the icon to the right end */
 }
 
+/* Hide the search container by default */
+.search-container {
+    display: none;
+    position: absolute;
+    top: 100px; /* Adjust based on the navigation bar's height */
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 2rem 0;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+}
+
+/* Show the search container when active */
+.search-container.active {
+    display: block;
+}
+
+/* Style for the search input container */
+.search-input-container {
+    position: relative;
+    width: 51rem;
+    margin: 0 auto; /* Center align */
+}
+
+/* Style for the search input */
+.search-input {
+    width: 100%;
+    height: 3.3rem;
+    border: 1px #5a5d5c solid;
+    font: 1rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    border-radius: 6px;
+    padding-left: 1rem;
+}
+
+.search-input:focus {
+    border: 1px black solid;
+    outline: none;
+}
+
+.search-input-icon {
+    position: absolute;
+    right: 0.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../icons/search.svg') no-repeat center center;
+    background-size: contain;
+    pointer-events: none; /* Ensure the icon does not block input interactions */
+    filter: invert(18%) sepia(100%) saturate(7483%) hue-rotate(357deg) brightness(70%) contrast(130%); /* Apply even darker red color */
+}
+
+.search-container .search-close-container {
+    position: relative;
+    max-width: 1290px; /* Set your desired max width */
+    margin: 0 auto; /* Center align the container */
+}
+
+.search-container .search-close-container .search-close {
+    position: absolute;
+    top: -1.2rem; /* Adjust as needed */
+    right: 0.1rem; /* Adjust as needed */
+    background: url('../../icons/close.svg') no-repeat center center;
+    background-size: contain;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: none;
+    cursor: pointer;
+}
+
+
 header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 2.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
