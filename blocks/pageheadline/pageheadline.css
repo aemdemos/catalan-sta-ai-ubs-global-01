@@ -141,6 +141,42 @@
   margin-top: 10px; /* Adjust the margin for the last paragraph */
 }
 
+@media (width < 1290px) {
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+        background-color: white; /* Background color of the text container */
+        padding: 1rem 0 1rem 1.5rem;
+        display: flex;
+        flex-direction: column; /* Ensure text elements stack vertically */
+        justify-content: space-between; /* Distribute content evenly */
+        position: relative;
+        max-width: 32rem;
+        top: 1.75rem;
+        left: 2rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p {
+        margin-top: 0.75rem;
+        color: #1c1c1c;
+        font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+        margin-bottom: 0; /* Remove bottom margin to ensure continuity */
+        margin-top: 0;
+        color:  #1c1c1c;
+        font: 300 2rem / 2.5rem Frutiger, Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
+        padding-top: 1.5rem;
+        display: flex;
+        margin: 10px 0; /* Add margin to match original image spacing */
+    }
+
+}
+
 @media (width < 1024px) {
     .pageheadline-container .pageheadline-wrapper {
         max-width: 100%;
