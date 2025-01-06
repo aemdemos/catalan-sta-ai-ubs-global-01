@@ -5,7 +5,7 @@
 
 .pageheadline {
   position: relative;
-  padding: 40px 24px;
+  /* padding: 24px; */
   min-height: 300px;
 }
 
@@ -31,13 +31,14 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  max-height: 500px;
 }
 
-@media (width >= 900px) {
+/* @media (width >= 900px) {
   .pageheadline {
-    padding: 40px 32px;
+    padding-left: 40px;
   }
-}
+} */
 
 @media (width >= 1280px) {
     .pageheadline {
@@ -47,23 +48,32 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
   background-color: white; /* Background color of the text container */
-  padding: 2rem 0 2rem 2rem;
+  padding: 40px;
   display: flex;
   flex-direction: column; /* Ensure text elements stack vertically */
   justify-content: space-between; /* Distribute content evenly */
   position: relative;
-  max-width: 39rem;
+  max-width: 545px;
   top: 3.75rem;
-  left: -2rem;
+  /* left: -2rem; */
 }
 
-.pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1::before,
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: -8px;
+    width: 4px;
+    background-color: #e60000;
+}
+
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
-    bottom: 0;
+    top: -8px;
+    bottom: 8px;
     width: 4px;
     background-color: #e60000;
 }
@@ -77,7 +87,7 @@
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1,
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
     position: relative;
-    padding-left: 2rem; /* Add padding to avoid overlap with the red line */
+    padding-left: 24px; /* Add padding to avoid overlap with the red line */
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
@@ -86,12 +96,16 @@
     color:  #1c1c1c;
     font: 300 2rem / 2.5rem Frutiger, Arial, Helvetica, sans-serif;
     font-size: 3rem;
-    line-height: 5rem;
+    line-height: 3.5625rem;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
-    margin-top: 0; /* Remove top margin to ensure continuity */
-    padding-right: 6rem;
+    margin: 0;
+    padding-right: 4rem;
+    font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    padding-top: 0.75rem;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type strong {
@@ -100,32 +114,36 @@
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
-    padding-top: 2.5rem;
+    /* padding-top: 2.5rem; */
     display: flex;
-    margin: 20px 0; /* Add margin to match original image spacing */
+    /* margin: 20px 0; Add margin to match original image spacing */
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button {
   background-color: #e60000;
   color: white;
-  padding: 15px 30px; /* Increase padding for prominence */
+  padding: 15px 24px; /* Increase padding for prominence */
   text-align: left;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
   border-radius: 0; /* Remove rounded design */
   box-shadow: none; /* Ensure no shadow is applied */
-  font: 0.7rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+  font: 0.8125rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+  padding-top: 0.8125rem;
+  height: 4.125rem;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong{
-    font: bold 0.9rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    /* font: bold 0.9rem / 1rem Frutiger, Arial, Helvetica, sans-serif; */
+    font-size: 1rem;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong::after {
     content: url('../../icons/arrow-line.svg');
     display: inline-block;
-    margin-left: 8px; /* Adjust the spacing as needed */
+    margin-left: 4px; /* Adjust the spacing as needed */
+    margin-right: 12px; /* Adjust the spacing as needed */
     width: 8px; /* Adjust the size as needed */
     height: 1px; /* Adjust the size as needed */
     vertical-align: -6px; /* Align the icon with the text */
@@ -138,7 +156,8 @@
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:last-of-type {
-  margin-top: 10px; /* Adjust the margin for the last paragraph */
+  margin-top: 2.5rem; /* Adjust the margin for the last paragraph */
+  margin-bottom: 0;
 }
 
 @media (width < 1290px) {
