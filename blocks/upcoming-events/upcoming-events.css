@@ -236,3 +236,21 @@
     }
 
 }
+
+@media (width > 1290px) {
+    .upcoming-events {
+        background-color: #f9f9f7;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+        padding: 0 1rem;
+    }
+
+    .upcoming-events div {
+        max-width: 1290px;
+        margin: auto;
+    }
+}
