@@ -156,6 +156,11 @@ header nav .nav-tools ul li a[href*="locations"] {
   margin-right: 0; /* Reduce margin */
 }
 
+header nav div:nth-child(5) {
+    display: none;
+    visibility: hidden;
+}
+
 @media (width <= 768px) {
   header nav {
     flex-direction: column;
