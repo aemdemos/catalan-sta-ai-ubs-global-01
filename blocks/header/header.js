@@ -172,7 +172,7 @@ export default async function decorate(block) {
 
   // Add search icon under nav-brand default-content-wrapper
   const ubsLogo = document.createElement('img');
-  ubsLogo.src = '../../../../icons/UBS_Logo_Semibold.svg';
+  ubsLogo.src = '../../../../icons/brand-logo-semibold.svg';
   ubsLogo.alt = 'UBS Logo Semibold';
   ubsLogo.classList.add('ubs-logo-icon');
   const defaultContentWrapper = navBrand.querySelector('.default-content-wrapper');
