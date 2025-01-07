@@ -56,7 +56,8 @@
         font-size: 1.2rem;
         line-height: 1.8rem;
         margin-top: 1.5rem; /* Space between the paragraph and the header */
-        padding-top: 1rem;
+        padding-top: 0.1rem;
+        margin-bottom: 1rem;
     }
 }
 
