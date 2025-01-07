@@ -29,7 +29,20 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
   --nav-height: 79px;
+
+  --grid-absolute-gutter: 40px;
+  --root-width: 100vw;
+  --grid-absolute-cols: 24;
+  --grid-container-spacing: 34px;
+  --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing) * 2);
+  --grid-absolute-col-width: calc((var(--grid-container-width) - var(--grid-absolute-gutter) * (var(--grid-absolute-cols) - 1)) / var(--grid-absolute-cols));
+
+  /* --root-width: calc(100vw - 24px); */
+  /* --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing) * 2); */
+
 }
+
+--grid-container-spacing: 64px;
 
 /* fallback fonts */
 @font-face {
@@ -88,6 +101,8 @@
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
     --nav-height: 159px;
+
+    --grid-container-spacing: 64px;
   }
 
     --grid-absolute-gutter: 40px;
@@ -101,17 +116,10 @@ body {
     font-family: var(--body-font-family);
     font-size: var(--body-font-size-m);
     line-height: 1.6;
-
-    --grid-absolute-gutter: 40px;
-    --root-width: 1905px;
-    --grid-absolute-cols: 24;
-    --grid-container-spacing: 34px;
-    --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing) * 2);
-    --grid-absolute-col-width: calc((var(--grid-container-width) - var(--grid-absolute-gutter) * (var(--grid-absolute-cols) - 1)) / var(--grid-absolute-cols));
-
-    @media (width >= 0) and (width <= 767px) {
+  
+    /* @media (width >= 0) and (width <= 767px) {
         --root-width: 500px;
-    }
+    } */
 }
 
 body.appear {

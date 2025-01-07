@@ -43,6 +43,8 @@ header nav {
     max-width: 1290px;
     margin: auto;
     padding-top: 24px;
+    padding-left: 64px;
+    padding-right: 64px;
 }
 
 header nav .nav-hamburger {
@@ -125,15 +127,18 @@ header nav .nav-sections .search-icon {
 header .nav-sections .search-container {
     display: none;
     position: absolute;
-    top: 100px; /* Adjust based on the navigation bar's height */
+    top: 106px; /* Adjust based on the navigation bar's height */
     left: 0;
     right: 0;
     width: 100%;
     background-color: white;
-    border: 1px solid #ccc;
-    padding: 2rem 0;
-    z-index: 2;
-    box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+    /* border: 1px solid #ccc; */
+    padding-bottom: 2.49rem;
+    padding-top: 2rem;
+    z-index: 20;
+    box-shadow: 
+        0 4px 6px rgba(28, 28, 28, .08),
+        0 2px 15px rgba(28, 28, 28, .08);
 }
 
 /* Show the search container when active */
@@ -144,17 +149,22 @@ header .nav-sections .search-container.active {
 /* Style for the search input container */
 header .nav-sections .search-input-container {
     position: relative;
-    width: 51rem;
+    width: 58%;
     margin: 0 auto; /* Center align */
 }
 
 /* Style for the search input */
 header .nav-sections .search-input {
     width: 100%;
-    height: 3.3rem;
+    height: 52px;
     border: 1px #5a5d5c solid;
     font: 1rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
     border-radius: 6px;
+    /* padding-left: 1rem; */
+    max-width: 847px;
+}
+
+header .nav-sections .search-input::placeholder {
     padding-left: 1rem;
 }
 
@@ -165,7 +175,7 @@ header .nav-sections .search-input:focus {
 
 header .nav-sections .search-input-icon {
     position: absolute;
-    right: 0.1rem;
+    right: 0.88rem;
     top: 50%;
     transform: translateY(-50%);
     width: 1.5rem;
@@ -184,8 +194,8 @@ header .nav-sections .search-container .search-close-container {
 
 header .nav-sections .search-container .search-close-container .search-close {
     position: absolute;
-    top: -1.2rem; /* Adjust as needed */
-    right: 0.1rem; /* Adjust as needed */
+    top: -1.3rem; /* Adjust as needed */
+    right: calc((var(--root-width) - var(--grid-container-width)) / 2 + .2rem); /* Adjust as needed */
     background: url('../../icons/close.svg') no-repeat center center;
     background-size: contain;
     width: 1.1rem;
@@ -249,7 +259,7 @@ header nav .nav-sections .default-content-wrapper::after {
     right: 0;
     width: 100%;
     border-bottom: 1px solid #cccabc;
-    margin-top: 2.24rem; /* Adjust the margin as needed */
+    margin-top: 2.26rem; /* Adjust the margin as needed */
 }
 
 header nav .nav-sections ul li ul {
