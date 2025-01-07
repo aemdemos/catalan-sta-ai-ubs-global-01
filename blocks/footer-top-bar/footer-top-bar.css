@@ -1,6 +1,6 @@
 .footer-top-bar-container > .footer-top-bar-wrapper {
-    padding: 10px 0; /* Padding for vertical alignment */
     background-color: white;
+    padding: 2.5rem 0 0.6rem;
 }
 
 .footer-top-bar-container > .footer-top-bar-wrapper > .footer-top-bar > div > div {

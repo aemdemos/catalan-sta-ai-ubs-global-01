@@ -43,6 +43,7 @@
     font-size: 0.85rem;
     font-weight: 550;
     padding-left: 0;
+    padding-top: 1.5rem;
 }
 
 .event-item-body .button-container a::after {
@@ -104,15 +105,15 @@
 }
 
 .picture-wrapper img {
-    max-width: 100%; /* Ensures images are responsive */
-    height: auto;
+    width: 100%; /* Ensures images take up the full width of the parent div */
+    height: auto; /* Maintains the aspect ratio */
 }
 
 .event-item-img .right-picture-wrapper {
     padding-top: 3.75em;
 }
 
-@media (width >= 750px) {
+@media (width >= 1024px) {
     .event-item {
         display: flex;
         flex-direction: column;
@@ -143,7 +144,7 @@
         flex-direction: row;
         font-family: Arial, sans-serif;
         min-height: 27rem;
-        padding:0;
+        padding: 2rem 0 5.8rem;
     }
 
     .recent-events .tabs-list {
@@ -196,6 +197,7 @@
     .recent-events .event-item {
         display: none; /* Hide all event items by default */
         flex: 1;
+        border-bottom: none;
     }
 
     .recent-events .event-item .event-item-label {

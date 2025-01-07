@@ -10,6 +10,7 @@ footer .footer p {
 
 .footer .footer-navigation {
     color: #5a5d5c;
+    padding-top: 1.4rem;
 }
 
 .footer .footer-navigation div {
@@ -32,7 +33,7 @@ footer .footer p {
 }
 
 .footer .disclaimer-text p {
-    margin-top: .9375em;
+    margin-top: .6375em;
     color: #5a5d5c;
     font: 300 0.75rem / 1.245rem Frutiger, Arial, Helvetica, sans-serif;
 }
@@ -60,7 +61,7 @@ footer .footer p {
 
 .footer .footer-links ul {
     list-style: none;
-    padding-top: 1rem;
+    padding-top: 1.3rem;
     padding-left: 0;
     padding-bottom: 2rem;
     margin: 0;
@@ -83,7 +84,7 @@ footer .footer p {
 }
 
 .footer .disclaimer-links {
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
 }
 
 .footer .disclaimer-text {

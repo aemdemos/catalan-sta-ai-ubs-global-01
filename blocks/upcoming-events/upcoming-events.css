@@ -31,12 +31,13 @@
     line-height: 2.25rem;
     color: #1c1c1c;
     padding-bottom: 2rem;
+    max-width: 60rem;
 }
 
 .upcoming-events .region-item a {
     text-decoration: none;
     color: #1c1c1c;
-    font: bold 0.875rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    font: bold 0.95rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,7 +152,7 @@
     max-width: 100%; /* Adjust as per your preference */
     margin: auto;
     padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 0;
 }
 
 .upcoming-events .region ul {

@@ -48,12 +48,22 @@
     text-align: left; /* Ensure text starts from the left */
     width: 75%; /* Ensure paragraph spans the full width of the container */
     margin-left: 0; /* Ensure the paragraph starts directly under the title */
+    margin-bottom: 2rem;
+}
+
+@media (width < 1290px) {
+    .sectionheader.block p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-top: 1.5rem; /* Space between the paragraph and the header */
+        padding-top: 1rem;
+    }
 }
 
 
 @media (width < 768px) {
     .sectionheader.block {
-        padding-top: 1.5rem;
+        padding-top: 2.5rem;
     }
 
     .sectionheader.block h2 {
@@ -67,8 +77,8 @@
     }
 
     .sectionheader.block p {
-        font-size: 1.3rem;
-        line-height: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
         margin-top: 1.5rem; /* Space between the paragraph and the header */
         text-align: left; /* Ensure text starts from the left */
         width: 100%; /* Ensure paragraph spans the full width of the container */
