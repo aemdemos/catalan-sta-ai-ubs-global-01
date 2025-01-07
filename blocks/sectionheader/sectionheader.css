@@ -48,6 +48,7 @@
     text-align: left; /* Ensure text starts from the left */
     width: 75%; /* Ensure paragraph spans the full width of the container */
     margin-left: 0; /* Ensure the paragraph starts directly under the title */
+    margin-bottom: 2rem;
 }
 
 
