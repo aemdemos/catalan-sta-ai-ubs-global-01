@@ -1,37 +1,37 @@
 .pageheadline-container .pageheadline-wrapper {
-  max-width: 1290px;
-  padding: 0;
+    max-width: 1290px;
+    padding: 0;
 }
 
 .pageheadline {
-  position: relative;
-  /* padding: 24px; */
-  min-height: 300px;
+    position: relative;
+    /* padding: 24px; */
+    min-height: 300px;
 }
 
 .pageheadline h1 {
-  max-width: 1290px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+    max-width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--background-color);
 }
 
 .pageheadline picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-  width: 100vw; /* Ensure it takes the full viewport width */
-  left: 50%; /* Center the picture */
-  transform: translateX(-50%); /* Center the picture */
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+    width: 100vw; /* Ensure it takes the full viewport width */
+    left: 50%; /* Center the picture */
+    transform: translateX(-50%); /* Center the picture */
 }
 
 .pageheadline img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
 }
 
 /* @media (width >= 900px) {
@@ -47,15 +47,15 @@
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
-  background-color: white; /* Background color of the text container */
-  padding: 40px;
-  display: flex;
-  flex-direction: column; /* Ensure text elements stack vertically */
-  justify-content: space-between; /* Distribute content evenly */
-  position: relative;
-  max-width: 545px;
-  top: 3.75rem;
-  /* left: -2rem; */
+    background-color: white; /* Background color of the text container */
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* Ensure text elements stack vertically */
+    justify-content: space-between; /* Distribute content evenly */
+    position: relative;
+    max-width: 545px;
+    top: 3.75rem;
+    /* left: -2rem; */
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1::before {
@@ -120,18 +120,18 @@
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button {
-  background-color: #e60000;
-  color: white;
-  padding: 15px 24px; /* Increase padding for prominence */
-  text-align: left;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 0; /* Remove rounded design */
-  box-shadow: none; /* Ensure no shadow is applied */
-  font: 0.8125rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
-  padding-top: 0.8125rem;
-  height: 4.125rem;
+    background-color: #e60000;
+    color: white;
+    padding: 15px 24px; /* Increase padding for prominence */
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0; /* Remove rounded design */
+    box-shadow: none; /* Ensure no shadow is applied */
+    font: 0.8125rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    padding-top: 0.8125rem;
+    height: 4.125rem;
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong{
@@ -152,15 +152,19 @@
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:hover,
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:focus {
-  background-color: darkred; /* Add a darker red on hover/focus for better effect */
+    background-color: darkred; /* Add a darker red on hover/focus for better effect */
 }
 
 .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:last-of-type {
-  margin-top: 2.5rem; /* Adjust the margin for the last paragraph */
-  margin-bottom: 0;
+    margin-top: 2.5rem; /* Adjust the margin for the last paragraph */
+    margin-bottom: 0;
 }
 
 @media (width < 1290px) {
+    .pageheadline {
+        min-height: 25rem;
+    }
+
     .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
         background-color: white; /* Background color of the text container */
         padding: 1rem 0 1rem 1.5rem;
@@ -194,6 +198,17 @@
         margin: 10px 0; /* Add margin to match original image spacing */
     }
 
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding-top: 0.50rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:last-of-type {
+        margin-top: 0;
+        padding-top: 1.7rem;
+    }
+
 }
 
 @media (width < 1024px) {
@@ -225,7 +240,7 @@
         height: 14.75rem; /* Set the height */
     }
 
-   .pageheadline h1 {
+    .pageheadline h1 {
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -275,12 +290,14 @@
     }
 
     .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
-        padding: 2rem 0 0 1.5rem;
+        padding: 1.5rem 0 0 1.5rem;
 
     }
 
     .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
         padding-right: 0;
-        padding-left: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        padding-top: 0.40rem;
     }
 }
