@@ -1,0 +1,303 @@
+.pageheadline-container .pageheadline-wrapper {
+    max-width: 1290px;
+    padding: 0;
+}
+
+.pageheadline {
+    position: relative;
+    /* padding: 24px; */
+    min-height: 300px;
+}
+
+.pageheadline h1 {
+    max-width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--background-color);
+}
+
+.pageheadline picture {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+    width: 100vw; /* Ensure it takes the full viewport width */
+    left: 50%; /* Center the picture */
+    transform: translateX(-50%); /* Center the picture */
+}
+
+.pageheadline img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+}
+
+/* @media (width >= 900px) {
+  .pageheadline {
+    padding-left: 40px;
+  }
+} */
+
+@media (width >= 1280px) {
+    .pageheadline {
+        height: 31.25rem;
+    }
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+    background-color: white; /* Background color of the text container */
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* Ensure text elements stack vertically */
+    justify-content: space-between; /* Distribute content evenly */
+    position: relative;
+    max-width: 545px;
+    top: 3.75rem;
+    /* left: -2rem; */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: -8px;
+    width: 4px;
+    background-color: #e60000;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -8px;
+    bottom: 8px;
+    width: 4px;
+    background-color: #e60000;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p {
+    margin-top: 0.75rem;
+    color: #1c1c1c;
+    font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1,
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
+    position: relative;
+    padding-left: 24px; /* Add padding to avoid overlap with the red line */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+    margin-bottom: 0; /* Remove bottom margin to ensure continuity */
+    margin-top: 0;
+    color:  #1c1c1c;
+    font: 300 2rem / 2.5rem Frutiger, Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    line-height: 3.5625rem;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
+    margin: 0;
+    padding-right: 4rem;
+    font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    padding-top: 0.75rem;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type strong {
+    color: #da0000;
+    font-weight: normal;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
+    /* padding-top: 2.5rem; */
+    display: flex;
+    /* margin: 20px 0; Add margin to match original image spacing */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button {
+    background-color: #e60000;
+    color: white;
+    padding: 15px 24px; /* Increase padding for prominence */
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0; /* Remove rounded design */
+    box-shadow: none; /* Ensure no shadow is applied */
+    font: 0.8125rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    padding-top: 0.8125rem;
+    height: 4.125rem;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong{
+    /* font: bold 0.9rem / 1rem Frutiger, Arial, Helvetica, sans-serif; */
+    font-size: 1rem;
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button strong::after {
+    content: url('../../icons/arrow-line.svg');
+    display: inline-block;
+    margin-left: 4px; /* Adjust the spacing as needed */
+    margin-right: 12px; /* Adjust the spacing as needed */
+    width: 8px; /* Adjust the size as needed */
+    height: 1px; /* Adjust the size as needed */
+    vertical-align: -6px; /* Align the icon with the text */
+    filter: invert();
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:hover,
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container .button:focus {
+    background-color: darkred; /* Add a darker red on hover/focus for better effect */
+}
+
+.pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:last-of-type {
+    margin-top: 2.5rem; /* Adjust the margin for the last paragraph */
+    margin-bottom: 0;
+}
+
+@media (width < 1290px) {
+    .pageheadline {
+        min-height: 25rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+        background-color: white; /* Background color of the text container */
+        padding: 1rem 0 1rem 1.5rem;
+        display: flex;
+        flex-direction: column; /* Ensure text elements stack vertically */
+        justify-content: space-between; /* Distribute content evenly */
+        position: relative;
+        max-width: 32rem;
+        top: 1.75rem;
+        left: 2rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p {
+        margin-top: 0.75rem;
+        color: #1c1c1c;
+        font: 1.25rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+        margin-bottom: 0; /* Remove bottom margin to ensure continuity */
+        margin-top: 0;
+        color:  #1c1c1c;
+        font: 300 2rem / 2.5rem Frutiger, Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
+        padding-top: 1.5rem;
+        display: flex;
+        margin: 10px 0; /* Add margin to match original image spacing */
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding-top: 0.50rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:last-of-type {
+        margin-top: 0;
+        padding-top: 1.7rem;
+    }
+
+}
+
+@media (width < 1024px) {
+    .pageheadline-container .pageheadline-wrapper {
+        max-width: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    .pageheadline {
+        position: relative;
+        padding: 0 2rem;
+    }
+
+    .pageheadline picture {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        object-fit: cover;
+        box-sizing: border-box;
+        width: 100vw; /* Ensure it takes the full viewport width */
+        left: 50%; /* Center the picture */
+        transform: translateX(-50%); /* Center the picture */
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child {
+        position: relative;
+        width: 100%;
+        height: 14.75rem; /* Set the height */
+    }
+
+    .pageheadline h1 {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--background-color);
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+        margin-bottom: 0; /* Remove bottom margin to ensure continuity */
+        margin-top: 0;
+        color:  #1c1c1c;
+        font: 300 .2rem / .5rem Frutiger, Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+        background-color: white; /* Background color of the text container */
+        display: flex;
+        flex-direction: column; /* Ensure text elements stack vertically */
+        justify-content: space-between; /* Distribute content evenly */
+        width: 100%;
+        left: -2rem;
+        top:0;
+        padding-bottom: 0;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline .button-container {
+        padding-top: 2rem;
+    }
+}
+
+@media (width < 768px) {
+    .pageheadline {
+        position: relative;
+        padding: 0 1.7rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:first-child {
+        position: relative;
+        width: 100%;
+        height: 10rem; /* Set the height */
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline h1 {
+        padding-left: 1.5rem;
+        font-size: 1.9rem;
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline > div:last-child {
+        padding: 1.5rem 0 0 1.5rem;
+
+    }
+
+    .pageheadline-container > .pageheadline-wrapper > .block.pageheadline p:first-of-type {
+        padding-right: 0;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        padding-top: 0.40rem;
+    }
+}

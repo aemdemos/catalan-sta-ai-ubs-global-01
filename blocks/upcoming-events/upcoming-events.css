@@ -1,0 +1,256 @@
+.upcoming-events-wrapper {
+    background-color: #f9f9f7;
+}
+
+.upcoming-events .sectionheader h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: #1c1c1c;
+    font-family: Frutiger, Arial, Helvetica, sans-serif;
+    display: block;
+    margin: 0; /* Remove margins to ensure proper spacing */
+    position: relative;
+    padding-bottom: 20px; /* Space for the underline */
+    padding-top: 3rem; /* Space for the underline */
+}
+
+.upcoming-events .sectionheader h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Adjust width as needed */
+    height: 4px;
+    background-color: #e60000;
+    position: absolute;
+    bottom: 0; /* Position underline directly under the header */
+    left: 0;
+}
+
+.upcoming-events .sectionheader p {
+    padding-top: 20px; /* Space for the underline */
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: #1c1c1c;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+}
+
+.upcoming-events .region-item a {
+    text-decoration: none;
+    color: #1c1c1c;
+    font: bold 0.95rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #8e8d83;
+}
+
+.upcoming-events .region-item a::after {
+    content: '';
+    bottom: 0;
+    transform: translateY(0) rotate(-90deg); /* Remove translateY to align with text */
+    width: 1rem; /* Set the desired width */
+    height: 1.5rem; /* Set the desired height */
+    background: url('../../icons/arrow.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.upcoming-events .region-item a:hover::after {
+    background: url('../../icons/right-arrow.svg') no-repeat center center;
+    transform: translateX(3px) translateY(0);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.upcoming-events .region-item a:hover {
+    text-decoration: none;
+}
+
+.upcoming-events .conference-calendar p.button-container:first-of-type {
+    background-color: #e60000;
+    color: white;
+    padding: 8px 40px; /* Increase padding for prominence */
+    padding-right: 30px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0; /* Remove rounded design */
+    box-shadow: none; /* Ensure no shadow is applied */
+}
+
+.upcoming-events .conference-calendar p.button-container:first-of-type a {
+    text-align: left;
+    font-size: 14px;
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
+    display: inline-block;
+    width: auto; /* Ensure the width is not restricted */
+    padding-right: 30px;
+    line-height: 1.5rem; /* Adjust line-height to match the icon size */
+}
+
+.upcoming-events .conference-calendar p.button-container:first-of-type a::after {
+    content: '';
+    position: absolute;
+    right: -.2rem;
+    bottom: 0;
+    transform: translateX(-7px) translateY(0) rotate(-90deg); /* Remove translateY to align with text */
+    width: 1.1rem; /* Set the desired width */
+    height: 1.5rem; /* Set the desired height */
+    background: url('../../icons/arrow_white.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.upcoming-events .conference-calendar p.button-container:nth-of-type(2) a::after {
+    content: '';
+    position: absolute;
+    transform: translateY(0) rotate(-90deg); /* Remove translateY to align with text */
+    width: 3rem; /* Set the desired width */
+    height: 1rem; /* Set the desired height */
+    background: url('../../icons/arrow.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.upcoming-events .conference-calendar p.button-container:first-of-type a:hover::after {
+    background: url('../../icons/right-arrow-white.svg') no-repeat center center;
+    transform: translateX(0) translateY(0);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.upcoming-events .conference-calendar p.button-container:nth-of-type(2) a {
+    padding-top: 2rem;
+    color: #1c1c1c;
+    font: bold 1rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+    padding-bottom: 2rem;
+}
+
+.upcoming-events .conference-calendar p.button-container:nth-of-type(2) a:hover::after {
+    background: url('../../icons/right-arrow.svg') no-repeat center center;
+    transform: translateX(0) translateY(-5px);
+    width: 3rem;
+    height: 1.5rem;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.upcoming-events .text p {
+    font: 1rem / 1.625 Frutiger, Arial, Helvetica, sans-serif;
+    color: #1c1c1c;
+    padding-top: .0225em;
+    margin-bottom: -.01em;
+}
+
+.upcoming-events .region {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust spacing between items */
+    justify-content: space-between;
+    max-width: 100%; /* Adjust as per your preference */
+    margin: auto;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+}
+
+.upcoming-events .region ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.upcoming-events .region-item {
+    flex: 1 1 calc(10% - 20px); /* 50% width with spacing */
+    text-align: left;
+    margin-bottom: calc(calc(var(--grid-absolute-col-width) * 1 + var(--grid-absolute-gutter) * 2) / 2);
+    margin-right: calc(1 / var(--grid-absolute-cols) * 100%);
+    width: calc(7 / var(--grid-absolute-cols) * 100%);
+    padding-left: calc(var(--grid-absolute-gutter) / 2);
+    padding-right: calc(var(--grid-absolute-gutter) / 2);
+    float: left;
+    max-width: 15rem;
+}
+
+@media (width >= 768px) and (width <= 1279px) {
+    .upcoming-events .region-item {
+        flex: 1 1 calc(20% - 20px);
+        padding-bottom: 0;
+        margin-bottom: calc(calc(var(--grid-absolute-col-width) * 1 + var(--grid-absolute-gutter) * 2) / 2);
+        margin-right: calc(1 / var(--grid-absolute-cols) * 100%);
+    }
+}
+
+@media (width <= 768px) {
+    .upcoming-events .region-item {
+        flex: 1 1 calc(30% - 20px);
+        margin-bottom: calc(calc(var(--grid-absolute-col-width) * 1 + var(--grid-absolute-gutter) * 2) / 2);
+        max-width: 10rem;
+    }
+
+    .upcoming-events .sectionheader h2 {
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        color: #1c1c1c;
+        font-family: Frutiger, Arial, Helvetica, sans-serif;
+        display: block;
+        margin: 0; /* Remove margins to ensure proper spacing */
+        position: relative;
+        padding-bottom: 18px; /* Space for the underline */
+        padding-top: 2rem; /* Space for the underline */
+    }
+
+    .upcoming-events .sectionheader h2::after {
+        width: 4rem; /* Adjust width as needed */
+    }
+
+    .upcoming-events .sectionheader p {
+        padding-top: 2px; /* Space for the underline */
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: #1c1c1c;
+        padding-bottom: 1rem;
+    }
+
+    .upcoming-events .region {
+        gap: 10px; /* Adjust spacing between items */
+        justify-content: space-between;
+        max-width: 100%; /* Adjust as per your preference */
+        margin: auto;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+    }
+
+    .upcoming-events .conference-calendar p.button-container:nth-of-type(2) a {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: #1c1c1c;
+        font: bold 1rem / 1rem Frutiger, Arial, Helvetica, sans-serif;
+        word-wrap: break-word; /* Ensures long words break */
+        white-space: normal; /* Allows text to wrap to the next line */
+        overflow-wrap: break-word; /* Modern property for word breaking */
+        text-align: left;
+    }
+
+}
+
+@media (width > 1290px) {
+    .upcoming-events {
+        background-color: #f9f9f7;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+    }
+
+    .upcoming-events div {
+        max-width: 1290px;
+        margin: auto;
+    }
+}

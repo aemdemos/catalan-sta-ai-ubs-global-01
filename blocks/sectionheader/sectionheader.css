@@ -1,0 +1,88 @@
+
+.sectionheader-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* Ensure it spans the full width */
+    padding: 0; /* Remove any padding to ensure alignment */
+}
+
+.sectionheader.block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px; /* Adjust padding as needed */
+}
+
+.sectionheader.block > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure full width */
+    align-items: flex-start; /* Ensure alignment starts from the left */
+}
+
+.sectionheader.block h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color:#1c1c1c;
+    font-family: Frutiger, Arial, Helvetica, sans-serif;
+    display: block;
+    margin: 0; /* Remove margins to ensure proper spacing */
+    position: relative;
+    padding-bottom: 20px; /* Space for the underline */
+}
+
+.sectionheader.block h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Adjust width as needed */
+    height: 4px;
+    background-color: #e60000;
+    position: absolute;
+    bottom: 0; /* Position underline directly under the header */
+    left: 0;
+}
+
+.sectionheader.block p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-top: 2.5rem; /* Space between the paragraph and the header */
+    text-align: left; /* Ensure text starts from the left */
+    width: 75%; /* Ensure paragraph spans the full width of the container */
+    margin-left: 0; /* Ensure the paragraph starts directly under the title */
+    margin-bottom: 2rem;
+}
+
+@media (width < 1290px) {
+    .sectionheader.block p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-top: 1.5rem; /* Space between the paragraph and the header */
+        padding-top: 0.1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (width < 768px) {
+    .sectionheader.block {
+        padding-top: 2.5rem;
+    }
+
+    .sectionheader.block h2 {
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        color:#1c1c1c;
+        font-family: Frutiger, Arial, Helvetica, sans-serif;
+        display: block;
+        margin: 0; /* Remove margins to ensure proper spacing */
+        position: relative;
+    }
+
+    .sectionheader.block p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-top: 1.5rem; /* Space between the paragraph and the header */
+        text-align: left; /* Ensure text starts from the left */
+        width: 100%; /* Ensure paragraph spans the full width of the container */
+        margin-left: 0; /* Ensure the paragraph starts directly under the title */
+    }
+}

@@ -12,11 +12,11 @@
  */
 :root {
   --background-color: white;
-  --light-color: #f8f8f8;
+  --light-color: #f4f3ee;
   --dark-color: #505050;
   --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-color: #131313;
+  --link-hover-color: #131313;
   --body-font-family: "Frutiger", "Frutiger Fallback", "Arial", "Helvetica", "sans-serif";
   --heading-font-family: "Frutiger", "Frutiger Fallback", "Arial", "Helvetica", "sans-serif";
   --body-font-size-m: 22px;
@@ -28,8 +28,21 @@
   --heading-font-size-m: 27px;
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
-  --nav-height: 64px;
+  --nav-height: 79px;
+
+  --grid-absolute-gutter: 40px;
+  --root-width: 100vw;
+  --grid-absolute-cols: 24;
+  --grid-container-spacing: 34px;
+  --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing) * 2);
+  --grid-absolute-col-width: calc((var(--grid-container-width) - var(--grid-absolute-gutter) * (var(--grid-absolute-cols) - 1)) / var(--grid-absolute-cols));
+
+  /* --root-width: calc(100vw - 24px); */
+  /* --grid-container-width: calc(var(--root-width) - var(--grid-container-spacing) * 2); */
+
 }
+
+--grid-container-spacing: 64px;
 
 /* fallback fonts */
 @font-face {
@@ -76,7 +89,7 @@
   size-adjust:99.73%;
 }
 
-@media (width>=900px) {
+@media (width > 1280px) {
   :root {
     --body-font-size-m: 18px;
     --body-font-size-s: 16px;
@@ -87,17 +100,26 @@
     --heading-font-size-m: 22px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
+    --nav-height: 159px;
+
+    --grid-container-spacing: 64px;
   }
+
+    --grid-absolute-gutter: 40px;
 }
 
 body {
-  display: none;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+    display: none;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size-m);
+    line-height: 1.6;
+  
+    /* @media (width >= 0) and (width <= 767px) {
+        --root-width: 500px;
+    } */
 }
 
 body.appear {
@@ -182,8 +204,8 @@ a:any-link {
 }
 
 a:hover {
-  color: var(--link-hover-color);
   text-decoration: underline;
+  text-decoration-color: #e60000;
 }
 
 /* buttons */
@@ -191,18 +213,13 @@ a.button:any-link, button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  color: var(--body-background-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -210,7 +227,6 @@ a.button:any-link, button {
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus {
-  background-color: var(--link-hover-color);
   cursor: pointer;
 }
 
@@ -248,7 +264,7 @@ main>.section {
 }
 
 main>.section>div {
-  max-width: 1200px;
+  max-width: 1290px;
   margin: auto;
   padding: 0 24px;
 }
@@ -257,7 +273,7 @@ main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width>=900px) {
+@media (width > 1280px) {
   main>.section>div {
     padding: 0 32px;
   }
