@@ -1,0 +1,239 @@
+.recent-events {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.recent-events .event-item {
+    border-bottom: 1px solid #f4f3ee;
+}
+
+.event-item-body p {
+    font: 1rem / 1.625rem Frutiger, Arial, Helvetica, sans-serif;
+    color: #1c1c1c;
+    padding-top: 0.0225em;
+    padding-bottom: 0;
+    margin-bottom: -0.01em;
+}
+
+.recent-events details p {
+    margin-bottom: 0.8em;
+}
+
+.recent-events .tabs-list {
+    display: none;
+}
+
+.recent-events details summary {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    overflow: auto;
+    transition: background-color 0.2s;
+}
+
+.event-item-label h3 {
+    color: #1c1c1c;
+    font: 1.2rem / 1.75rem Frutiger, Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-bottom: 0.8em;
+}
+
+.event-item-body .button-container a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 550;
+    padding-left: 0;
+    padding-top: 1.5rem;
+}
+
+.event-item-body .button-container a::after {
+    content: '';
+    display: inline-block;
+    width: 1rem; /* Set the desired width */
+    height: 1rem; /* Set the desired height */
+    background: url('../../icons/arrow.svg') no-repeat center center;
+    background-size: contain;
+    margin-left: 1rem; /* Adjust the spacing between the text and the icon */
+    transform: translateY(15%) rotate(-90deg);
+}
+
+.event-item-body .button-container a:hover::after {
+    background: url('../../icons/right-arrow.svg') no-repeat center center;
+    transform: translateX(0) translateY(0);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.event-item-body .button-container a.button:hover, a.button:focus, button:hover, button:focus {
+    background-color: var(--background-color);
+    color: #1c1c1c;
+    cursor: pointer;
+}
+
+.recent-events details summary::-webkit-details-marker {
+    display: none;
+}
+
+.recent-events details summary::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 18px;
+    width: 16px; /* Set the desired width */
+    height: 16px; /* Set the desired height */
+    background: url('../../icons/arrow.svg') no-repeat center center;
+    background-size: contain;
+    transition: transform 0.2s;
+}
+
+.recent-events details[open] summary::after {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+.event-item-img {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between images */
+    padding-bottom: 1rem;
+}
+
+.picture-wrapper {
+    flex: 1; /* Ensures both images take up equal space */
+    margin: 0 10px; /* Adds some space between the images */
+}
+
+.picture-wrapper img {
+    width: 100%; /* Ensures images take up the full width of the parent div */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.event-item-img .right-picture-wrapper {
+    padding-top: 3.75em;
+}
+
+@media (width >= 1024px) {
+    .event-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-item-label {
+        order: -1;
+    }
+
+    .event-item-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .event-item-body {
+        flex: 1;
+        margin: 1em 5% 1em 0;
+    }
+
+    .event-item-img {
+        flex: 1;
+    }
+}
+
+@media (width >= 1290px) {
+    .recent-events {
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, sans-serif;
+        min-height: 27rem;
+        padding: 2rem 0 5.8rem;
+    }
+
+    .recent-events .tabs-list {
+        flex: 0 0 200px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .recent-events .tabs-tab {
+        display: flex;
+        align-items: center;
+        padding: 0.2rem;
+        cursor: pointer;
+        text-align: left;
+        font-size: 22px;
+        font-family: Frutiger, Arial, Helvetica, sans-serif;
+        margin: 0.1rem;
+        background-color: var(--background-color);
+        border-style: none;
+        transition: background-color 1s ease;
+        margin-right: 1rem;
+    }
+
+    .recent-events .tabs-tab.active {
+        background-color: var(--background-color);
+        color: #1c1c1c;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .recent-events .arrow {
+        background: url('../../icons/right-arrow.svg') no-repeat center center;
+        background-size: contain;
+        transform: translateX(0) translateY(5px); /* Shift the arrow down */
+        transition: transform 1s ease; /* Only transition the transform property */
+        display: inline-block;
+        opacity: 0;
+    }
+
+    .recent-events .tabs-tab:hover .arrow,
+    .recent-events .tabs-tab.active .arrow {
+        opacity: 1;
+        width: 1.5rem; /* Set the desired width */
+        height: 1.5rem; /* Set the desired height */
+        transform: translateX(0) translateY(5px); /* Shift the arrow down */
+    }
+
+    .recent-events .event-item {
+        display: none; /* Hide all event items by default */
+        flex: 1;
+        border-bottom: none;
+    }
+
+    .recent-events .event-item .event-item-label {
+        display: none;
+    }
+
+    .recent-events .event-item-content {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    .recent-events .event-item[open] {
+        display: block; /* Show the selected event content */
+    }
+
+    .recent-events .event-item-body {
+        flex: 1; /* Takes up available space */
+    }
+
+    /* Ensure the images and content are well-aligned */
+    .recent-events .event-item-img {
+        flex: 1; /* Takes up available space */
+        display: flex;
+    }
+
+    .recent-events .event-item-img .picture-wrapper {
+        flex: 1;
+    }
+
+    .recent-events .event-item-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
