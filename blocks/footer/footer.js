@@ -17,4 +17,17 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+  const upcomingEvents = block.querySelectorAll('.footer-navigation > div');
+  upcomingEvents.forEach((event) => {
+    const firstDiv = event.children[0];
+    const secondDiv = event.children[1];
+    if (firstDiv && secondDiv) {
+      const pElement = firstDiv.querySelector('p');
+      if (pElement) {
+        const className = pElement.textContent.trim();
+        secondDiv.classList.add(className);
+      }
+      firstDiv.remove(); // Remove the first div
+    }
+  });
 }
