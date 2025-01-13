@@ -57,6 +57,7 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false) {
+  // eslint-disable-next-line no-unused-expressions
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
@@ -103,6 +104,43 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function toggleNav(nav, mobileSections) {
+  mobileSections.classList.toggle('open');
+  const button = nav.querySelector('.nav-hamburger button');
+  const isOpen = mobileSections.classList.contains('open');
+  button.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  button.style.backgroundImage = isOpen ? "url('../../../../icons/close.svg')" : "url('../../../../icons/burgermenu.svg')";
+  document.body.classList.toggle('no-scroll', isOpen);
+}
+
+function searchPopUp(sectionWrapper, searchIcon, isMobile) {
+  const searchContainer = document.createElement('div');
+  searchContainer.className = isMobile ? 'mobile-search-container' : 'search-container';
+  searchContainer.innerHTML = `
+  <div class="${isMobile ? 'mobile-search-close-container' : 'search-close-container'}">
+      <button class="${isMobile ? 'mobile-search-close' : 'search-close'}"></button>
+  </div>
+  <div class="${isMobile ? 'mobile-search-input-container' : 'search-input-container'}">
+  <input type="text" class="${isMobile ? 'mobile-search-input' : 'search-input'}" placeholder="Enter a question">
+      <div class="${isMobile ? 'mobile-search-input-icon' : 'search-input-icon'}"></div>
+  </div>
+`;
+  sectionWrapper.appendChild(searchContainer);
+  const closeButton = searchContainer.querySelector(isMobile ? '.mobile-search-close' : '.search-close');
+  searchIcon.addEventListener('click', () => {
+    searchContainer.classList.add('active');
+  });
+  closeButton.addEventListener('click', () => {
+    searchContainer.classList.remove('active');
+  });
+  // Close search bar when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!searchContainer.contains(event.target) && !searchIcon.contains(event.target)) {
+      searchContainer.classList.remove('active');
+    }
+  });
+}
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -119,7 +157,7 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['brand', 'sections', 'tools', 'mobile-sections'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -131,6 +169,28 @@ export default async function decorate(block) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
   }
+
+  // Add search icon under nav-brand default-content-wrapper
+  const ubsLogo = document.createElement('img');
+  ubsLogo.src = '../../../../icons/brand-logo-semibold.svg';
+  ubsLogo.alt = 'UBS Logo Semibold';
+  ubsLogo.classList.add('ubs-logo-icon');
+  const defaultContentWrapper = navBrand.querySelector('.default-content-wrapper');
+  defaultContentWrapper.prepend(ubsLogo);
+
+  const mobileSearchIcon = document.createElement('img');
+  mobileSearchIcon.src = '../../../../icons/search.svg';
+  mobileSearchIcon.alt = 'Search Icon';
+  mobileSearchIcon.classList.add('mobile-search-icon');
+  defaultContentWrapper.append(mobileSearchIcon);
+  searchPopUp(defaultContentWrapper, mobileSearchIcon, true);
+
+  const navTools = nav.querySelector('.nav-tools');
+  const brandToolsWrapper = document.createElement('div');
+  brandToolsWrapper.classList.add('nav-brand-tools-wrapper');
+  brandToolsWrapper.append(navBrand);
+  brandToolsWrapper.append(navTools);
+  nav.prepend(brandToolsWrapper);
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
@@ -144,15 +204,72 @@ export default async function decorate(block) {
         }
       });
     });
+
+    const mobileSections = nav.querySelector('.nav-mobile-sections');
+    mobileSections.querySelectorAll('ul li').forEach((item) => {
+      if (item.querySelector('ul')) {
+        const expandBtn = document.createElement('button');
+        expandBtn.className = 'expand-btn';
+        expandBtn.setAttribute('aria-label', 'Expand');
+        expandBtn.innerHTML = '<span class="expand-list-icon"></span>';
+        item.insertBefore(expandBtn, item.firstChild);
+      }
+    });
+
+    mobileSections.querySelectorAll('ul li .expand-btn').forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent the click event from bubbling up to the parent li
+        const listItem = button.closest('li');
+        const siblingListItems = Array.from(listItem.parentElement.children);
+        siblingListItems.forEach((item) => {
+          if (item !== listItem) {
+            item.classList.remove('expanded');
+            const expandListIcon = item.querySelector('.expand-list-icon');
+            if (expandListIcon) {
+              expandListIcon.classList.remove('rotate');
+            }
+          }
+        });
+        listItem.classList.toggle('expanded');
+        const expandListIcon = button.querySelector('.expand-list-icon');
+        if (expandListIcon) {
+          expandListIcon.classList.toggle('rotate');
+        }
+      });
+    });
+
+    const conferencesLi = nav.querySelector('.nav-sections ul li.nav-drop ul');
+    if (conferencesLi) {
+      // Clone the nested ul
+      const clonedUl = conferencesLi.cloneNode(true);
+      // Create a new ul element
+      const newUl = document.createElement('ul');
+      newUl.classList.add('sublist-desktop');
+      // Append the cloned ul to the new ul
+      newUl.appendChild(clonedUl);
+      // Append the new ul to the nav-sections
+      navSections.appendChild(newUl);
+    }
+
+    // Add search icon
+    const navSectionWrapper = nav.querySelector('.nav-sections .default-content-wrapper');
+    const searchIcon = document.createElement('img');
+    searchIcon.src = '../../../../icons/search.svg';
+    searchIcon.alt = 'Search Icon';
+    searchIcon.classList.add('search-icon');
+    navSectionWrapper.append(searchIcon);
+    searchPopUp(navSectionWrapper, searchIcon, false);
   }
 
   // hamburger for mobile
+  const mobileSections = nav.querySelector('.nav-mobile-sections');
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  // hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', () => toggleNav(nav, mobileSections));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
